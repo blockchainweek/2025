@@ -1,0 +1,884 @@
+{
+  "responses": [
+    {
+      "submissionId": "clqnzm9hi0000356mpat3d6f1",
+      "submissionTime": "2025-02-01T09:40:25.862Z",
+      "lastUpdatedAt": "2025-02-01T09:40:25.862Z",
+      "questions": [
+        { "id": "uiNZ", "name": "Event Name", "type": "ShortAnswer", "value": "ETH Berlin Summit" },
+        {
+          "id": "2ymU",
+          "name": "Event Description",
+          "type": "LongAnswer",
+          "value": "The premier Ethereum conference in Berlin, bringing together developers, researchers, and industry leaders to discuss the future of Ethereum and web3."
+        },
+        { "id": "fckv", "name": "Event Type", "type": "Checkboxes", "value": ["Conference"] },
+        { "id": "qKr1", "name": "Email", "type": "EmailInput", "value": "info@ethberlin.org" },
+        {
+          "id": "kudt",
+          "name": "Logo",
+          "type": "FileUpload",
+          "value": [{ "url": "https://picsum.photos/seed/ethberlin/200", "filename": "eth-berlin-logo.jpg" }]
+        },
+        { "id": "2HNZ", "name": "Organizer Name", "type": "ShortAnswer", "value": "ETH Berlin DAO" },
+        { "id": "36q5", "name": "Event Start Date", "type": "DatePicker", "value": "2025-06-08" },
+        { "id": "jLDf", "name": "Number of Days", "type": "Slider", "value": 2 },
+        { "id": "tMZz", "name": "Day 1 - Start Time", "type": "TimePicker", "value": "09:00" },
+        { "id": "wbNC", "name": "Day 1 - End Time", "type": "TimePicker", "value": "18:00" },
+        { "id": "73c6", "name": "Day 2 - Start Time", "type": "TimePicker", "value": "09:00" },
+        { "id": "s1yB", "name": "Day 2 - End Time", "type": "TimePicker", "value": "17:00" },
+        { "id": "jmRB", "name": "Event Link/Website", "type": "URLInput", "value": "https://ethberlin.org" },
+        { "id": "naa9", "name": "Venue Name", "type": "ShortAnswer", "value": "STATION Berlin" },
+        {
+          "id": "ry8w",
+          "name": "Venue Address",
+          "type": "ShortAnswer",
+          "value": "Luckenwalder Str. 4-6, 10963 Berlin"
+        },
+        { "id": "oPoS", "name": "Venue Link", "type": "URLInput", "value": "https://station-berlin.de" },
+        {
+          "id": "g5HN",
+          "name": "Link to Event Group Chat",
+          "type": "URLInput",
+          "value": "https://discord.gg/ethberlin"
+        },
+        { "id": "cYGW", "name": "Event Group Chat Platform", "type": "Dropdown", "value": "Discord" }
+      ],
+      "calculations": [],
+      "urlParameters": [],
+      "quiz": {},
+      "documents": [],
+      "scheduling": [],
+      "payments": []
+    },
+    {
+      "submissionId": "clqnzm9hi0000356mpat3d6f2",
+      "submissionTime": "2025-02-01T10:15:00.000Z",
+      "lastUpdatedAt": "2025-02-01T10:15:00.000Z",
+      "questions": [
+        { "id": "uiNZ", "name": "Event Name", "type": "ShortAnswer", "value": "Berlin Web3 Hackathon" },
+        {
+          "id": "2ymU",
+          "name": "Event Description",
+          "type": "LongAnswer",
+          "value": "A 3-day hackathon focused on building decentralized applications. Join us for intense coding, workshops, and a chance to win amazing prizes!"
+        },
+        { "id": "fckv", "name": "Event Type", "type": "Checkboxes", "value": ["Hackathon"] },
+        { "id": "qKr1", "name": "Email", "type": "EmailInput", "value": "hack@berlinweb3.dev" },
+        {
+          "id": "kudt",
+          "name": "Logo",
+          "type": "FileUpload",
+          "value": [{ "url": "https://picsum.photos/seed/hackathon/200", "filename": "hackathon-logo.jpg" }]
+        },
+        { "id": "2HNZ", "name": "Organizer Name", "type": "ShortAnswer", "value": "Berlin Web3 Community" },
+        { "id": "36q5", "name": "Event Start Date", "type": "DatePicker", "value": "2025-06-09" },
+        { "id": "jLDf", "name": "Number of Days", "type": "Slider", "value": 3 },
+        { "id": "tMZz", "name": "Day 1 - Start Time", "type": "TimePicker", "value": "10:00" },
+        { "id": "wbNC", "name": "Day 1 - End Time", "type": "TimePicker", "value": "22:00" },
+        { "id": "73c6", "name": "Day 2 - Start Time", "type": "TimePicker", "value": "09:00" },
+        { "id": "s1yB", "name": "Day 2 - End Time", "type": "TimePicker", "value": "23:00" },
+        { "id": "f6cm", "name": "Day 3 - Start Time", "type": "TimePicker", "value": "09:00" },
+        { "id": "wDgR", "name": "Day 3 - End Time", "type": "TimePicker", "value": "18:00" },
+        { "id": "jmRB", "name": "Event Link/Website", "type": "URLInput", "value": "https://berlinweb3.dev/hack" },
+        { "id": "naa9", "name": "Venue Name", "type": "ShortAnswer", "value": "Factory Berlin" },
+        {
+          "id": "ry8w",
+          "name": "Venue Address",
+          "type": "ShortAnswer",
+          "value": "Rheinsberger Str. 76/77, 10115 Berlin"
+        },
+        { "id": "oPoS", "name": "Venue Link", "type": "URLInput", "value": "https://factoryberlin.com" },
+        {
+          "id": "g5HN",
+          "name": "Link to Event Group Chat",
+          "type": "URLInput",
+          "value": "https://t.me/berlinweb3hack"
+        },
+        { "id": "cYGW", "name": "Event Group Chat Platform", "type": "Dropdown", "value": "Telegram" }
+      ],
+      "calculations": [],
+      "urlParameters": [],
+      "quiz": {},
+      "documents": [],
+      "scheduling": [],
+      "payments": []
+    },
+    {
+      "submissionId": "clqnzm9hi0000356mpat3d6f3",
+      "submissionTime": "2025-02-01T11:20:00.000Z",
+      "lastUpdatedAt": "2025-02-01T11:20:00.000Z",
+      "questions": [
+        { "id": "uiNZ", "name": "Event Name", "type": "ShortAnswer", "value": "DeFi Nights Berlin" },
+        {
+          "id": "2ymU",
+          "name": "Event Description",
+          "type": "LongAnswer",
+          "value": "Evening networking events focused on DeFi innovations. Each night features lightning talks, demos, and plenty of networking opportunities."
+        },
+        { "id": "fckv", "name": "Event Type", "type": "Checkboxes", "value": ["Meetup", "Party"] },
+        { "id": "qKr1", "name": "Email", "type": "EmailInput", "value": "defi@berlin.finance" },
+        {
+          "id": "kudt",
+          "name": "Logo",
+          "type": "FileUpload",
+          "value": [{ "url": "https://picsum.photos/seed/defi/200", "filename": "defi-nights-logo.jpg" }]
+        },
+        { "id": "2HNZ", "name": "Organizer Name", "type": "ShortAnswer", "value": "Berlin DeFi Alliance" },
+        { "id": "36q5", "name": "Event Start Date", "type": "DatePicker", "value": "2025-06-10" },
+        { "id": "jLDf", "name": "Number of Days", "type": "Slider", "value": 4 },
+        { "id": "tMZz", "name": "Day 1 - Start Time", "type": "TimePicker", "value": "18:00" },
+        { "id": "wbNC", "name": "Day 1 - End Time", "type": "TimePicker", "value": "23:00" },
+        { "id": "73c6", "name": "Day 2 - Start Time", "type": "TimePicker", "value": "18:00" },
+        { "id": "s1yB", "name": "Day 2 - End Time", "type": "TimePicker", "value": "23:00" },
+        { "id": "f6cm", "name": "Day 3 - Start Time", "type": "TimePicker", "value": "18:00" },
+        { "id": "wDgR", "name": "Day 3 - End Time", "type": "TimePicker", "value": "23:00" },
+        { "id": "x3GJ", "name": "Day 4 - Start Time", "type": "TimePicker", "value": "18:00" },
+        { "id": "8N1S", "name": "Day 4 - End Time", "type": "TimePicker", "value": "23:00" },
+        { "id": "jmRB", "name": "Event Link/Website", "type": "URLInput", "value": "https://defi-nights.berlin" },
+        { "id": "naa9", "name": "Venue Name", "type": "ShortAnswer", "value": "Soho House Berlin" },
+        { "id": "ry8w", "name": "Venue Address", "type": "ShortAnswer", "value": "Torstraße 1, 10119 Berlin" },
+        {
+          "id": "oPoS",
+          "name": "Venue Link",
+          "type": "URLInput",
+          "value": "https://sohohouse.com/houses/soho-house-berlin"
+        },
+        {
+          "id": "g5HN",
+          "name": "Link to Event Group Chat",
+          "type": "URLInput",
+          "value": "https://signal.group/defi-nights"
+        },
+        { "id": "cYGW", "name": "Event Group Chat Platform", "type": "Dropdown", "value": "Signal" }
+      ],
+      "calculations": [],
+      "urlParameters": [],
+      "quiz": {},
+      "documents": [],
+      "scheduling": [],
+      "payments": []
+    },
+    {
+      "submissionId": "clqnzm9hi0000356mpat3d6f4",
+      "submissionTime": "2025-02-01T12:30:00.000Z",
+      "lastUpdatedAt": "2025-02-01T12:30:00.000Z",
+      "questions": [
+        { "id": "uiNZ", "name": "Event Name", "type": "ShortAnswer", "value": "Blockchain Developer Workshop" },
+        {
+          "id": "2ymU",
+          "name": "Event Description",
+          "type": "LongAnswer",
+          "value": "Intensive hands-on workshop series covering smart contract development, security best practices, and advanced blockchain concepts."
+        },
+        { "id": "fckv", "name": "Event Type", "type": "Checkboxes", "value": ["Conference", "Meetup"] },
+        { "id": "qKr1", "name": "Email", "type": "EmailInput", "value": "workshop@blockdev.berlin" },
+        {
+          "id": "kudt",
+          "name": "Logo",
+          "type": "FileUpload",
+          "value": [{ "url": "https://picsum.photos/seed/workshop/200", "filename": "workshop-logo.jpg" }]
+        },
+        { "id": "2HNZ", "name": "Organizer Name", "type": "ShortAnswer", "value": "Berlin Blockchain Academy" },
+        { "id": "36q5", "name": "Event Start Date", "type": "DatePicker", "value": "2025-06-11" },
+        { "id": "jLDf", "name": "Number of Days", "type": "Slider", "value": 5 },
+        { "id": "tMZz", "name": "Day 1 - Start Time", "type": "TimePicker", "value": "10:00" },
+        { "id": "wbNC", "name": "Day 1 - End Time", "type": "TimePicker", "value": "16:00" },
+        { "id": "73c6", "name": "Day 2 - Start Time", "type": "TimePicker", "value": "10:00" },
+        { "id": "s1yB", "name": "Day 2 - End Time", "type": "TimePicker", "value": "16:00" },
+        { "id": "f6cm", "name": "Day 3 - Start Time", "type": "TimePicker", "value": "10:00" },
+        { "id": "wDgR", "name": "Day 3 - End Time", "type": "TimePicker", "value": "16:00" },
+        { "id": "x3GJ", "name": "Day 4 - Start Time", "type": "TimePicker", "value": "10:00" },
+        { "id": "8N1S", "name": "Day 4 - End Time", "type": "TimePicker", "value": "16:00" },
+        { "id": "ab9e", "name": "Day 5 - Start Time", "type": "TimePicker", "value": "10:00" },
+        { "id": "2moL", "name": "Day 5 - End Time", "type": "TimePicker", "value": "16:00" },
+        { "id": "jmRB", "name": "Event Link/Website", "type": "URLInput", "value": "https://blockdev.berlin/workshop" },
+        { "id": "naa9", "name": "Venue Name", "type": "ShortAnswer", "value": "betahaus" },
+        {
+          "id": "ry8w",
+          "name": "Venue Address",
+          "type": "ShortAnswer",
+          "value": "Rudi-Dutschke-Straße 23, 10969 Berlin"
+        },
+        { "id": "oPoS", "name": "Venue Link", "type": "URLInput", "value": "https://betahaus.com" },
+        {
+          "id": "g5HN",
+          "name": "Link to Event Group Chat",
+          "type": "URLInput",
+          "value": "https://matrix.to/#/#blockdev:matrix.org"
+        },
+        { "id": "cYGW", "name": "Event Group Chat Platform", "type": "Dropdown", "value": "Matrix" }
+      ],
+      "calculations": [],
+      "urlParameters": [],
+      "quiz": {},
+      "documents": [],
+      "scheduling": [],
+      "payments": []
+    },
+    {
+      "submissionId": "clqnzm9hi0000356mpat3d6f5",
+      "submissionTime": "2025-02-01T13:45:00.000Z",
+      "lastUpdatedAt": "2025-02-01T13:45:00.000Z",
+      "questions": [
+        { "id": "uiNZ", "name": "Event Name", "type": "ShortAnswer", "value": "Crypto Art Exhibition" },
+        {
+          "id": "2ymU",
+          "name": "Event Description",
+          "type": "LongAnswer",
+          "value": "A week-long NFT art exhibition featuring works from renowned digital artists. Daily curator talks and artist meet-and-greets."
+        },
+        { "id": "fckv", "name": "Event Type", "type": "Checkboxes", "value": ["Conference", "Party"] },
+        { "id": "qKr1", "name": "Email", "type": "EmailInput", "value": "art@cryptoberlin.com" },
+        {
+          "id": "kudt",
+          "name": "Logo",
+          "type": "FileUpload",
+          "value": [{ "url": "https://picsum.photos/seed/cryptoart/200", "filename": "crypto-art-logo.jpg" }]
+        },
+        { "id": "2HNZ", "name": "Organizer Name", "type": "ShortAnswer", "value": "Berlin NFT Collective" },
+        { "id": "36q5", "name": "Event Start Date", "type": "DatePicker", "value": "2025-06-15" },
+        { "id": "jLDf", "name": "Number of Days", "type": "Slider", "value": 7 },
+        { "id": "tMZz", "name": "Day 1 - Start Time", "type": "TimePicker", "value": "11:00" },
+        { "id": "wbNC", "name": "Day 1 - End Time", "type": "TimePicker", "value": "20:00" },
+        { "id": "73c6", "name": "Day 2 - Start Time", "type": "TimePicker", "value": "11:00" },
+        { "id": "s1yB", "name": "Day 2 - End Time", "type": "TimePicker", "value": "20:00" },
+        { "id": "f6cm", "name": "Day 3 - Start Time", "type": "TimePicker", "value": "11:00" },
+        { "id": "wDgR", "name": "Day 3 - End Time", "type": "TimePicker", "value": "20:00" },
+        { "id": "x3GJ", "name": "Day 4 - Start Time", "type": "TimePicker", "value": "11:00" },
+        { "id": "8N1S", "name": "Day 4 - End Time", "type": "TimePicker", "value": "20:00" },
+        { "id": "ab9e", "name": "Day 5 - Start Time", "type": "TimePicker", "value": "11:00" },
+        { "id": "2moL", "name": "Day 5 - End Time", "type": "TimePicker", "value": "20:00" },
+        { "id": "n3cM", "name": "Day 6 - Start Time", "type": "TimePicker", "value": "11:00" },
+        { "id": "pGaa", "name": "Day 6 - End Time", "type": "TimePicker", "value": "20:00" },
+        { "id": "f7LF", "name": "Day 7 - Start Time", "type": "TimePicker", "value": "11:00" },
+        { "id": "9Pnu", "name": "Day 7 - End Time", "type": "TimePicker", "value": "22:00" },
+        { "id": "jmRB", "name": "Event Link/Website", "type": "URLInput", "value": "https://cryptoart.berlin" },
+        { "id": "naa9", "name": "Venue Name", "type": "ShortAnswer", "value": "Urban Spree" },
+        { "id": "ry8w", "name": "Venue Address", "type": "ShortAnswer", "value": "Revaler Str. 99, 10245 Berlin" },
+        { "id": "oPoS", "name": "Venue Link", "type": "URLInput", "value": "https://urbanspree.com" },
+        {
+          "id": "g5HN",
+          "name": "Link to Event Group Chat",
+          "type": "URLInput",
+          "value": "https://discord.gg/cryptoart"
+        },
+        { "id": "cYGW", "name": "Event Group Chat Platform", "type": "Dropdown", "value": "Discord" }
+      ],
+      "calculations": [],
+      "urlParameters": [],
+      "quiz": {},
+      "documents": [],
+      "scheduling": [],
+      "payments": []
+    },
+    {
+      "submissionId": "clqnzm9hi0000356mpat3d6f6",
+      "submissionTime": "2025-02-01T14:00:00.000Z",
+      "lastUpdatedAt": "2025-02-01T14:00:00.000Z",
+      "questions": [
+        { "id": "uiNZ", "name": "Event Name", "type": "ShortAnswer", "value": "Web3 Gaming Summit" },
+        {
+          "id": "2ymU",
+          "name": "Event Description",
+          "type": "LongAnswer",
+          "value": "Join us for an exciting exploration of blockchain gaming, NFTs in gaming, and the future of play-to-earn. Meet game developers, investors, and gaming enthusiasts."
+        },
+        { "id": "fckv", "name": "Event Type", "type": "Checkboxes", "value": ["Conference", "Meetup"] },
+        { "id": "qKr1", "name": "Email", "type": "EmailInput", "value": "gaming@web3berlin.com" },
+        {
+          "id": "kudt",
+          "name": "Logo",
+          "type": "FileUpload",
+          "value": [{ "url": "https://picsum.photos/seed/gaming/200", "filename": "gaming-summit-logo.jpg" }]
+        },
+        { "id": "2HNZ", "name": "Organizer Name", "type": "ShortAnswer", "value": "Web3 Gaming Alliance" },
+        { "id": "36q5", "name": "Event Start Date", "type": "DatePicker", "value": "2025-06-13" },
+        { "id": "jLDf", "name": "Number of Days", "type": "Slider", "value": 2 },
+        { "id": "tMZz", "name": "Day 1 - Start Time", "type": "TimePicker", "value": "09:30" },
+        { "id": "wbNC", "name": "Day 1 - End Time", "type": "TimePicker", "value": "17:30" },
+        { "id": "73c6", "name": "Day 2 - Start Time", "type": "TimePicker", "value": "09:30" },
+        { "id": "s1yB", "name": "Day 2 - End Time", "type": "TimePicker", "value": "17:30" },
+        { "id": "jmRB", "name": "Event Link/Website", "type": "URLInput", "value": "https://web3gaming.berlin" },
+        { "id": "naa9", "name": "Venue Name", "type": "ShortAnswer", "value": "Kulturbrauerei" },
+        { "id": "ry8w", "name": "Venue Address", "type": "ShortAnswer", "value": "Schönhauser Allee 36, 10435 Berlin" },
+        { "id": "oPoS", "name": "Venue Link", "type": "URLInput", "value": "https://kulturbrauerei.de" },
+        {
+          "id": "g5HN",
+          "name": "Link to Event Group Chat",
+          "type": "URLInput",
+          "value": "https://discord.gg/web3gaming"
+        },
+        { "id": "cYGW", "name": "Event Group Chat Platform", "type": "Dropdown", "value": "Discord" }
+      ]
+    },
+    {
+      "submissionId": "clqnzm9hi0000356mpat3d6f7",
+      "submissionTime": "2025-02-01T14:15:00.000Z",
+      "lastUpdatedAt": "2025-02-01T14:15:00.000Z",
+      "questions": [
+        { "id": "uiNZ", "name": "Event Name", "type": "ShortAnswer", "value": "Berlin DAO Meetup" },
+        {
+          "id": "2ymU",
+          "name": "Event Description",
+          "type": "LongAnswer",
+          "value": "A casual evening meetup for DAO enthusiasts. Share experiences, discuss governance models, and network with fellow DAO builders and participants."
+        },
+        { "id": "fckv", "name": "Event Type", "type": "Checkboxes", "value": ["Meetup", "Happy Hour"] },
+        { "id": "qKr1", "name": "Email", "type": "EmailInput", "value": "dao@berlin.community" },
+        {
+          "id": "kudt",
+          "name": "Logo",
+          "type": "FileUpload",
+          "value": [{ "url": "https://picsum.photos/seed/dao/200", "filename": "dao-meetup-logo.jpg" }]
+        },
+        { "id": "2HNZ", "name": "Organizer Name", "type": "ShortAnswer", "value": "Berlin DAO Community" },
+        { "id": "36q5", "name": "Event Start Date", "type": "DatePicker", "value": "2025-06-14" },
+        { "id": "jLDf", "name": "Number of Days", "type": "Slider", "value": 1 },
+        { "id": "tMZz", "name": "Day 1 - Start Time", "type": "TimePicker", "value": "18:00" },
+        { "id": "wbNC", "name": "Day 1 - End Time", "type": "TimePicker", "value": "22:00" },
+        { "id": "jmRB", "name": "Event Link/Website", "type": "URLInput", "value": "https://dao.berlin" },
+        { "id": "naa9", "name": "Venue Name", "type": "ShortAnswer", "value": "The Reed" },
+        { "id": "ry8w", "name": "Venue Address", "type": "ShortAnswer", "value": "Köpenicker Str. 70, 10179 Berlin" },
+        { "id": "oPoS", "name": "Venue Link", "type": "URLInput", "value": "https://thereed.berlin" },
+        {
+          "id": "g5HN",
+          "name": "Link to Event Group Chat",
+          "type": "URLInput",
+          "value": "https://discord.gg/berlinDAO"
+        },
+        { "id": "cYGW", "name": "Event Group Chat Platform", "type": "Dropdown", "value": "Discord" }
+      ]
+    },
+    {
+      "submissionId": "clqnzm9hi0000356mpat3d6f8",
+      "submissionTime": "2025-02-01T14:30:00.000Z",
+      "lastUpdatedAt": "2025-02-01T14:30:00.000Z",
+      "questions": [
+        { "id": "uiNZ", "name": "Event Name", "type": "ShortAnswer", "value": "Blockchain Security Workshop" },
+        {
+          "id": "2ymU",
+          "name": "Event Description",
+          "type": "LongAnswer",
+          "value": "Deep dive into blockchain security. Learn about common vulnerabilities, audit techniques, and best practices for secure smart contract development."
+        },
+        { "id": "fckv", "name": "Event Type", "type": "Checkboxes", "value": ["Conference", "Hackathon"] },
+        { "id": "qKr1", "name": "Email", "type": "EmailInput", "value": "security@blockdev.berlin" },
+        {
+          "id": "kudt",
+          "name": "Logo",
+          "type": "FileUpload",
+          "value": [{ "url": "https://picsum.photos/seed/security/200", "filename": "security-workshop-logo.jpg" }]
+        },
+        { "id": "2HNZ", "name": "Organizer Name", "type": "ShortAnswer", "value": "Berlin Security Collective" },
+        { "id": "36q5", "name": "Event Start Date", "type": "DatePicker", "value": "2025-06-16" },
+        { "id": "jLDf", "name": "Number of Days", "type": "Slider", "value": 3 },
+        { "id": "tMZz", "name": "Day 1 - Start Time", "type": "TimePicker", "value": "09:00" },
+        { "id": "wbNC", "name": "Day 1 - End Time", "type": "TimePicker", "value": "17:00" },
+        { "id": "73c6", "name": "Day 2 - Start Time", "type": "TimePicker", "value": "09:00" },
+        { "id": "s1yB", "name": "Day 2 - End Time", "type": "TimePicker", "value": "17:00" },
+        { "id": "f6cm", "name": "Day 3 - Start Time", "type": "TimePicker", "value": "09:00" },
+        { "id": "wDgR", "name": "Day 3 - End Time", "type": "TimePicker", "value": "17:00" },
+        { "id": "jmRB", "name": "Event Link/Website", "type": "URLInput", "value": "https://security.blockdev.berlin" },
+        { "id": "naa9", "name": "Venue Name", "type": "ShortAnswer", "value": "Alte Münze" },
+        { "id": "ry8w", "name": "Venue Address", "type": "ShortAnswer", "value": "Molkenmarkt 2, 10179 Berlin" },
+        { "id": "oPoS", "name": "Venue Link", "type": "URLInput", "value": "https://alte-muenze-berlin.de" },
+        {
+          "id": "g5HN",
+          "name": "Link to Event Group Chat",
+          "type": "URLInput",
+          "value": "https://discord.gg/blockchainsecurity"
+        },
+        { "id": "cYGW", "name": "Event Group Chat Platform", "type": "Dropdown", "value": "Discord" }
+      ]
+    },
+    {
+      "submissionId": "clqnzm9hi0000356mpat3d6f9",
+      "submissionTime": "2025-02-01T14:45:00.000Z",
+      "lastUpdatedAt": "2025-02-01T14:45:00.000Z",
+      "questions": [
+        { "id": "uiNZ", "name": "Event Name", "type": "ShortAnswer", "value": "Web3 Founders Coworking" },
+        {
+          "id": "2ymU",
+          "name": "Event Description",
+          "type": "LongAnswer",
+          "value": "Open coworking space for Web3 founders and teams. Network, collaborate, and build alongside other blockchain entrepreneurs."
+        },
+        { "id": "fckv", "name": "Event Type", "type": "Checkboxes", "value": ["Coworking", "Meetup"] },
+        { "id": "qKr1", "name": "Email", "type": "EmailInput", "value": "space@web3founders.berlin" },
+        {
+          "id": "kudt",
+          "name": "Logo",
+          "type": "FileUpload",
+          "value": [{ "url": "https://picsum.photos/seed/coworking/200", "filename": "coworking-logo.jpg" }]
+        },
+        { "id": "2HNZ", "name": "Organizer Name", "type": "ShortAnswer", "value": "Web3 Founders Berlin" },
+        { "id": "36q5", "name": "Event Start Date", "type": "DatePicker", "value": "2025-06-17" },
+        { "id": "jLDf", "name": "Number of Days", "type": "Slider", "value": 5 },
+        { "id": "tMZz", "name": "Day 1 - Start Time", "type": "TimePicker", "value": "09:00" },
+        { "id": "wbNC", "name": "Day 1 - End Time", "type": "TimePicker", "value": "18:00" },
+        { "id": "73c6", "name": "Day 2 - Start Time", "type": "TimePicker", "value": "09:00" },
+        { "id": "s1yB", "name": "Day 2 - End Time", "type": "TimePicker", "value": "18:00" },
+        { "id": "f6cm", "name": "Day 3 - Start Time", "type": "TimePicker", "value": "09:00" },
+        { "id": "wDgR", "name": "Day 3 - End Time", "type": "TimePicker", "value": "18:00" },
+        { "id": "x3GJ", "name": "Day 4 - Start Time", "type": "TimePicker", "value": "09:00" },
+        { "id": "8N1S", "name": "Day 4 - End Time", "type": "TimePicker", "value": "18:00" },
+        { "id": "ab9e", "name": "Day 5 - Start Time", "type": "TimePicker", "value": "09:00" },
+        { "id": "2moL", "name": "Day 5 - End Time", "type": "TimePicker", "value": "18:00" },
+        {
+          "id": "jmRB",
+          "name": "Event Link/Website",
+          "type": "URLInput",
+          "value": "https://web3founders.berlin/space"
+        },
+        { "id": "naa9", "name": "Venue Name", "type": "ShortAnswer", "value": "The Circus" },
+        { "id": "ry8w", "name": "Venue Address", "type": "ShortAnswer", "value": "Weinbergsweg 20, 10119 Berlin" },
+        { "id": "oPoS", "name": "Venue Link", "type": "URLInput", "value": "https://thecircus.berlin" },
+        {
+          "id": "g5HN",
+          "name": "Link to Event Group Chat",
+          "type": "URLInput",
+          "value": "https://discord.gg/web3founders"
+        },
+        { "id": "cYGW", "name": "Event Group Chat Platform", "type": "Dropdown", "value": "Discord" }
+      ]
+    },
+    {
+      "submissionId": "clqnzm9hi0000356mpat3d6f10",
+      "submissionTime": "2025-02-01T15:00:00.000Z",
+      "lastUpdatedAt": "2025-02-01T15:00:00.000Z",
+      "questions": [
+        { "id": "uiNZ", "name": "Event Name", "type": "ShortAnswer", "value": "Crypto Trading Workshop" },
+        {
+          "id": "2ymU",
+          "name": "Event Description",
+          "type": "LongAnswer",
+          "value": "Learn advanced trading strategies, risk management, and technical analysis specifically for cryptocurrency markets."
+        },
+        { "id": "fckv", "name": "Event Type", "type": "Checkboxes", "value": ["Conference", "Meetup"] },
+        { "id": "qKr1", "name": "Email", "type": "EmailInput", "value": "trading@cryptoberlin.edu" },
+        {
+          "id": "kudt",
+          "name": "Logo",
+          "type": "FileUpload",
+          "value": [{ "url": "https://picsum.photos/seed/trading/200", "filename": "trading-workshop-logo.jpg" }]
+        },
+        { "id": "2HNZ", "name": "Organizer Name", "type": "ShortAnswer", "value": "Crypto Trading Academy" },
+        { "id": "36q5", "name": "Event Start Date", "type": "DatePicker", "value": "2025-06-18" },
+        { "id": "jLDf", "name": "Number of Days", "type": "Slider", "value": 2 },
+        { "id": "tMZz", "name": "Day 1 - Start Time", "type": "TimePicker", "value": "10:00" },
+        { "id": "wbNC", "name": "Day 1 - End Time", "type": "TimePicker", "value": "16:00" },
+        { "id": "73c6", "name": "Day 2 - Start Time", "type": "TimePicker", "value": "10:00" },
+        { "id": "s1yB", "name": "Day 2 - End Time", "type": "TimePicker", "value": "16:00" },
+        { "id": "jmRB", "name": "Event Link/Website", "type": "URLInput", "value": "https://trading.cryptoberlin.edu" },
+        { "id": "naa9", "name": "Venue Name", "type": "ShortAnswer", "value": "Mindspace" },
+        { "id": "ry8w", "name": "Venue Address", "type": "ShortAnswer", "value": "Friedrichstraße 68, 10117 Berlin" },
+        { "id": "oPoS", "name": "Venue Link", "type": "URLInput", "value": "https://mindspace.me/berlin" },
+        {
+          "id": "g5HN",
+          "name": "Link to Event Group Chat",
+          "type": "URLInput",
+          "value": "https://discord.gg/cryptotrading"
+        },
+        { "id": "cYGW", "name": "Event Group Chat Platform", "type": "Dropdown", "value": "Discord" }
+      ]
+    },
+    {
+      "submissionId": "clqnzm9hi0000356mpat3d6f11",
+      "submissionTime": "2025-02-01T15:15:00.000Z",
+      "lastUpdatedAt": "2025-02-01T15:15:00.000Z",
+      "questions": [
+        { "id": "uiNZ", "name": "Event Name", "type": "ShortAnswer", "value": "Layer 2 Summit" },
+        {
+          "id": "2ymU",
+          "name": "Event Description",
+          "type": "LongAnswer",
+          "value": "A comprehensive exploration of Layer 2 scaling solutions. Join us for technical deep dives, implementation workshops, and discussions about the future of blockchain scalability."
+        },
+        { "id": "fckv", "name": "Event Type", "type": "Checkboxes", "value": ["Conference"] },
+        { "id": "qKr1", "name": "Email", "type": "EmailInput", "value": "l2@scaling.berlin" },
+        {
+          "id": "kudt",
+          "name": "Logo",
+          "type": "FileUpload",
+          "value": [{ "url": "https://picsum.photos/seed/l2summit/200", "filename": "l2-summit-logo.jpg" }]
+        },
+        { "id": "2HNZ", "name": "Organizer Name", "type": "ShortAnswer", "value": "Scaling Solutions Alliance" },
+        { "id": "36q5", "name": "Event Start Date", "type": "DatePicker", "value": "2025-06-19" },
+        { "id": "jLDf", "name": "Number of Days", "type": "Slider", "value": 2 },
+        { "id": "tMZz", "name": "Day 1 - Start Time", "type": "TimePicker", "value": "09:00" },
+        { "id": "wbNC", "name": "Day 1 - End Time", "type": "TimePicker", "value": "18:00" },
+        { "id": "73c6", "name": "Day 2 - Start Time", "type": "TimePicker", "value": "09:00" },
+        { "id": "s1yB", "name": "Day 2 - End Time", "type": "TimePicker", "value": "17:00" },
+        { "id": "jmRB", "name": "Event Link/Website", "type": "URLInput", "value": "https://l2summit.berlin" },
+        { "id": "naa9", "name": "Venue Name", "type": "ShortAnswer", "value": "Kosmos Berlin" },
+        { "id": "ry8w", "name": "Venue Address", "type": "ShortAnswer", "value": "Karl-Marx-Allee 131A, 10243 Berlin" },
+        { "id": "oPoS", "name": "Venue Link", "type": "URLInput", "value": "https://kosmos-berlin.de" },
+        { "id": "g5HN", "name": "Link to Event Group Chat", "type": "URLInput", "value": "https://discord.gg/layer2" },
+        { "id": "cYGW", "name": "Event Group Chat Platform", "type": "Dropdown", "value": "Discord" }
+      ]
+    },
+    {
+      "submissionId": "clqnzm9hi0000356mpat3d6f12",
+      "submissionTime": "2025-02-01T15:30:00.000Z",
+      "lastUpdatedAt": "2025-02-01T15:30:00.000Z",
+      "questions": [
+        { "id": "uiNZ", "name": "Event Name", "type": "ShortAnswer", "value": "DeFi Developer Conference" },
+        {
+          "id": "2ymU",
+          "name": "Event Description",
+          "type": "LongAnswer",
+          "value": "Three days of intensive DeFi development workshops, covering topics from basic protocol integration to advanced MEV strategies and novel DeFi primitives."
+        },
+        { "id": "fckv", "name": "Event Type", "type": "Checkboxes", "value": ["Conference", "Hackathon"] },
+        { "id": "qKr1", "name": "Email", "type": "EmailInput", "value": "defi@dev.berlin" },
+        {
+          "id": "kudt",
+          "name": "Logo",
+          "type": "FileUpload",
+          "value": [{ "url": "https://picsum.photos/seed/defidev/200", "filename": "defi-dev-logo.jpg" }]
+        },
+        { "id": "2HNZ", "name": "Organizer Name", "type": "ShortAnswer", "value": "DeFi Builders Collective" },
+        { "id": "36q5", "name": "Event Start Date", "type": "DatePicker", "value": "2025-06-19" },
+        { "id": "jLDf", "name": "Number of Days", "type": "Slider", "value": 3 },
+        { "id": "tMZz", "name": "Day 1 - Start Time", "type": "TimePicker", "value": "10:00" },
+        { "id": "wbNC", "name": "Day 1 - End Time", "type": "TimePicker", "value": "18:00" },
+        { "id": "73c6", "name": "Day 2 - Start Time", "type": "TimePicker", "value": "10:00" },
+        { "id": "s1yB", "name": "Day 2 - End Time", "type": "TimePicker", "value": "18:00" },
+        { "id": "f6cm", "name": "Day 3 - Start Time", "type": "TimePicker", "value": "10:00" },
+        { "id": "wDgR", "name": "Day 3 - End Time", "type": "TimePicker", "value": "17:00" },
+        { "id": "jmRB", "name": "Event Link/Website", "type": "URLInput", "value": "https://defidev.berlin" },
+        { "id": "naa9", "name": "Venue Name", "type": "ShortAnswer", "value": "Silent Green" },
+        { "id": "ry8w", "name": "Venue Address", "type": "ShortAnswer", "value": "Gerichtstraße 35, 13347 Berlin" },
+        { "id": "oPoS", "name": "Venue Link", "type": "URLInput", "value": "https://silent-green.net" },
+        { "id": "g5HN", "name": "Link to Event Group Chat", "type": "URLInput", "value": "https://discord.gg/defidev" },
+        { "id": "cYGW", "name": "Event Group Chat Platform", "type": "Dropdown", "value": "Discord" }
+      ]
+    },
+    {
+      "submissionId": "clqnzm9hi0000356mpat3d6f13",
+      "submissionTime": "2025-02-01T15:45:00.000Z",
+      "lastUpdatedAt": "2025-02-01T15:45:00.000Z",
+      "questions": [
+        { "id": "uiNZ", "name": "Event Name", "type": "ShortAnswer", "value": "Blockchain Art Night" },
+        {
+          "id": "2ymU",
+          "name": "Event Description",
+          "type": "LongAnswer",
+          "value": "An evening celebration of blockchain art and culture. Live NFT minting, artist presentations, and interactive digital art installations."
+        },
+        { "id": "fckv", "name": "Event Type", "type": "Checkboxes", "value": ["Party", "Meetup"] },
+        { "id": "qKr1", "name": "Email", "type": "EmailInput", "value": "art@blockchain.berlin" },
+        {
+          "id": "kudt",
+          "name": "Logo",
+          "type": "FileUpload",
+          "value": [{ "url": "https://picsum.photos/seed/artnight/200", "filename": "art-night-logo.jpg" }]
+        },
+        { "id": "2HNZ", "name": "Organizer Name", "type": "ShortAnswer", "value": "Blockchain Art Collective" },
+        { "id": "36q5", "name": "Event Start Date", "type": "DatePicker", "value": "2025-06-20" },
+        { "id": "jLDf", "name": "Number of Days", "type": "Slider", "value": 1 },
+        { "id": "tMZz", "name": "Day 1 - Start Time", "type": "TimePicker", "value": "19:00" },
+        { "id": "wbNC", "name": "Day 1 - End Time", "type": "TimePicker", "value": "23:00" },
+        {
+          "id": "jmRB",
+          "name": "Event Link/Website",
+          "type": "URLInput",
+          "value": "https://artnight.blockchain.berlin"
+        },
+        { "id": "naa9", "name": "Venue Name", "type": "ShortAnswer", "value": "Tresor Berlin" },
+        { "id": "ry8w", "name": "Venue Address", "type": "ShortAnswer", "value": "Köpenicker Str. 70, 10179 Berlin" },
+        { "id": "oPoS", "name": "Venue Link", "type": "URLInput", "value": "https://tresorberlin.com" },
+        {
+          "id": "g5HN",
+          "name": "Link to Event Group Chat",
+          "type": "URLInput",
+          "value": "https://discord.gg/blockchainart"
+        },
+        { "id": "cYGW", "name": "Event Group Chat Platform", "type": "Dropdown", "value": "Discord" }
+      ]
+    },
+    {
+      "submissionId": "clqnzm9hi0000356mpat3d6f14",
+      "submissionTime": "2025-02-01T16:00:00.000Z",
+      "lastUpdatedAt": "2025-02-01T16:00:00.000Z",
+      "questions": [
+        { "id": "uiNZ", "name": "Event Name", "type": "ShortAnswer", "value": "Zero Knowledge Happy Hour" },
+        {
+          "id": "2ymU",
+          "name": "Event Description",
+          "type": "LongAnswer",
+          "value": "Casual networking event for ZK enthusiasts. Share ideas, discuss recent developments, and connect with fellow privacy advocates."
+        },
+        { "id": "fckv", "name": "Event Type", "type": "Checkboxes", "value": ["Happy Hour", "Meetup"] },
+        { "id": "qKr1", "name": "Email", "type": "EmailInput", "value": "zk@privacy.berlin" },
+        {
+          "id": "kudt",
+          "name": "Logo",
+          "type": "FileUpload",
+          "value": [{ "url": "https://picsum.photos/seed/zkhh/200", "filename": "zk-happy-hour-logo.jpg" }]
+        },
+        { "id": "2HNZ", "name": "Organizer Name", "type": "ShortAnswer", "value": "Privacy Tech Berlin" },
+        { "id": "36q5", "name": "Event Start Date", "type": "DatePicker", "value": "2025-06-20" },
+        { "id": "jLDf", "name": "Number of Days", "type": "Slider", "value": 1 },
+        { "id": "tMZz", "name": "Day 1 - Start Time", "type": "TimePicker", "value": "17:00" },
+        { "id": "wbNC", "name": "Day 1 - End Time", "type": "TimePicker", "value": "20:00" },
+        { "id": "jmRB", "name": "Event Link/Website", "type": "URLInput", "value": "https://zk.privacy.berlin" },
+        { "id": "naa9", "name": "Venue Name", "type": "ShortAnswer", "value": "Café Moscow" },
+        { "id": "ry8w", "name": "Venue Address", "type": "ShortAnswer", "value": "Karl-Marx-Allee 34, 10178 Berlin" },
+        { "id": "oPoS", "name": "Venue Link", "type": "URLInput", "value": "https://cafemoscow.berlin" },
+        {
+          "id": "g5HN",
+          "name": "Link to Event Group Chat",
+          "type": "URLInput",
+          "value": "https://discord.gg/zkprivacy"
+        },
+        { "id": "cYGW", "name": "Event Group Chat Platform", "type": "Dropdown", "value": "Discord" }
+      ]
+    },
+    {
+      "submissionId": "clqnzm9hi0000356mpat3d6f15",
+      "submissionTime": "2025-02-01T16:15:00.000Z",
+      "lastUpdatedAt": "2025-02-01T16:15:00.000Z",
+      "questions": [
+        { "id": "uiNZ", "name": "Event Name", "type": "ShortAnswer", "value": "Web3 UX Workshop" },
+        {
+          "id": "2ymU",
+          "name": "Event Description",
+          "type": "LongAnswer",
+          "value": "Learn how to design better user experiences for Web3 applications. Focus on wallet interactions, transaction flows, and making DApps more accessible."
+        },
+        { "id": "fckv", "name": "Event Type", "type": "Checkboxes", "value": ["Conference", "Meetup"] },
+        { "id": "qKr1", "name": "Email", "type": "EmailInput", "value": "ux@web3.berlin" },
+        {
+          "id": "kudt",
+          "name": "Logo",
+          "type": "FileUpload",
+          "value": [{ "url": "https://picsum.photos/seed/uxworkshop/200", "filename": "ux-workshop-logo.jpg" }]
+        },
+        { "id": "2HNZ", "name": "Organizer Name", "type": "ShortAnswer", "value": "Web3 Design DAO" },
+        { "id": "36q5", "name": "Event Start Date", "type": "DatePicker", "value": "2025-06-21" },
+        { "id": "jLDf", "name": "Number of Days", "type": "Slider", "value": 2 },
+        { "id": "tMZz", "name": "Day 1 - Start Time", "type": "TimePicker", "value": "10:00" },
+        { "id": "wbNC", "name": "Day 1 - End Time", "type": "TimePicker", "value": "17:00" },
+        { "id": "73c6", "name": "Day 2 - Start Time", "type": "TimePicker", "value": "10:00" },
+        { "id": "s1yB", "name": "Day 2 - End Time", "type": "TimePicker", "value": "16:00" },
+        { "id": "jmRB", "name": "Event Link/Website", "type": "URLInput", "value": "https://ux.web3.berlin" },
+        { "id": "naa9", "name": "Venue Name", "type": "ShortAnswer", "value": "Design Offices" },
+        { "id": "ry8w", "name": "Venue Address", "type": "ShortAnswer", "value": "Hessische Str. 11, 10115 Berlin" },
+        { "id": "oPoS", "name": "Venue Link", "type": "URLInput", "value": "https://designoffices.de/berlin" },
+        {
+          "id": "g5HN",
+          "name": "Link to Event Group Chat",
+          "type": "URLInput",
+          "value": "https://discord.gg/web3design"
+        },
+        { "id": "cYGW", "name": "Event Group Chat Platform", "type": "Dropdown", "value": "Discord" }
+      ]
+    },
+    {
+      "submissionId": "clqnzm9hi0000356mpat3d6f16",
+      "submissionTime": "2025-02-01T16:30:00.000Z",
+      "lastUpdatedAt": "2025-02-01T16:30:00.000Z",
+      "questions": [
+        { "id": "uiNZ", "name": "Event Name", "type": "ShortAnswer", "value": "Blockchain Governance Forum" },
+        {
+          "id": "2ymU",
+          "name": "Event Description",
+          "type": "LongAnswer",
+          "value": "A forum dedicated to discussing governance models in blockchain projects. Share experiences and best practices for decentralized decision-making."
+        },
+        { "id": "fckv", "name": "Event Type", "type": "Checkboxes", "value": ["Conference"] },
+        { "id": "qKr1", "name": "Email", "type": "EmailInput", "value": "governance@blockchain.berlin" },
+        {
+          "id": "kudt",
+          "name": "Logo",
+          "type": "FileUpload",
+          "value": [{ "url": "https://picsum.photos/seed/governance/200", "filename": "governance-logo.jpg" }]
+        },
+        { "id": "2HNZ", "name": "Organizer Name", "type": "ShortAnswer", "value": "Blockchain Governance Initiative" },
+        { "id": "36q5", "name": "Event Start Date", "type": "DatePicker", "value": "2025-06-21" },
+        { "id": "jLDf", "name": "Number of Days", "type": "Slider", "value": 2 },
+        { "id": "tMZz", "name": "Day 1 - Start Time", "type": "TimePicker", "value": "09:30" },
+        { "id": "wbNC", "name": "Day 1 - End Time", "type": "TimePicker", "value": "17:30" },
+        { "id": "73c6", "name": "Day 2 - Start Time", "type": "TimePicker", "value": "09:30" },
+        { "id": "s1yB", "name": "Day 2 - End Time", "type": "TimePicker", "value": "16:30" },
+        {
+          "id": "jmRB",
+          "name": "Event Link/Website",
+          "type": "URLInput",
+          "value": "https://governance.blockchain.berlin"
+        },
+        { "id": "naa9", "name": "Venue Name", "type": "ShortAnswer", "value": "Spreespeicher" },
+        { "id": "ry8w", "name": "Venue Address", "type": "ShortAnswer", "value": "Stralauer Allee 2, 10245 Berlin" },
+        { "id": "oPoS", "name": "Venue Link", "type": "URLInput", "value": "https://spreespeicher-events.de" },
+        {
+          "id": "g5HN",
+          "name": "Link to Event Group Chat",
+          "type": "URLInput",
+          "value": "https://discord.gg/blockchaingovernance"
+        },
+        { "id": "cYGW", "name": "Event Group Chat Platform", "type": "Dropdown", "value": "Discord" }
+      ]
+    },
+    {
+      "submissionId": "clqnzm9hi0000356mpat3d6f17",
+      "submissionTime": "2025-02-01T16:45:00.000Z",
+      "lastUpdatedAt": "2025-02-01T16:45:00.000Z",
+      "questions": [
+        { "id": "uiNZ", "name": "Event Name", "type": "ShortAnswer", "value": "Crypto Gaming Tournament" },
+        {
+          "id": "2ymU",
+          "name": "Event Description",
+          "type": "LongAnswer",
+          "value": "Join us for an exciting day of blockchain gaming competitions. Featuring popular Web3 games, prizes in crypto, and networking with gaming guilds."
+        },
+        { "id": "fckv", "name": "Event Type", "type": "Checkboxes", "value": ["Party", "Meetup"] },
+        { "id": "qKr1", "name": "Email", "type": "EmailInput", "value": "gaming@crypto.berlin" },
+        {
+          "id": "kudt",
+          "name": "Logo",
+          "type": "FileUpload",
+          "value": [{ "url": "https://picsum.photos/seed/gaming/200", "filename": "gaming-tournament-logo.jpg" }]
+        },
+        { "id": "2HNZ", "name": "Organizer Name", "type": "ShortAnswer", "value": "Crypto Gaming Alliance" },
+        { "id": "36q5", "name": "Event Start Date", "type": "DatePicker", "value": "2025-06-21" },
+        { "id": "jLDf", "name": "Number of Days", "type": "Slider", "value": 1 },
+        { "id": "tMZz", "name": "Day 1 - Start Time", "type": "TimePicker", "value": "12:00" },
+        { "id": "wbNC", "name": "Day 1 - End Time", "type": "TimePicker", "value": "22:00" },
+        { "id": "jmRB", "name": "Event Link/Website", "type": "URLInput", "value": "https://gaming.crypto.berlin" },
+        { "id": "naa9", "name": "Venue Name", "type": "ShortAnswer", "value": "Spielfeld Digital Hub" },
+        { "id": "ry8w", "name": "Venue Address", "type": "ShortAnswer", "value": "Skalitzer Str. 85/86, 10997 Berlin" },
+        { "id": "oPoS", "name": "Venue Link", "type": "URLInput", "value": "https://spielfeld.com" },
+        {
+          "id": "g5HN",
+          "name": "Link to Event Group Chat",
+          "type": "URLInput",
+          "value": "https://discord.gg/cryptogaming"
+        },
+        { "id": "cYGW", "name": "Event Group Chat Platform", "type": "Dropdown", "value": "Discord" }
+      ]
+    },
+    {
+      "submissionId": "clqnzm9hi0000356mpat3d6f18",
+      "submissionTime": "2025-02-01T17:00:00.000Z",
+      "lastUpdatedAt": "2025-02-01T17:00:00.000Z",
+      "questions": [
+        { "id": "uiNZ", "name": "Event Name", "type": "ShortAnswer", "value": "Web3 Career Fair" },
+        {
+          "id": "2ymU",
+          "name": "Event Description",
+          "type": "LongAnswer",
+          "value": "Connect with leading Web3 companies hiring in Berlin. Features company presentations, on-site interviews, and career development workshops."
+        },
+        { "id": "fckv", "name": "Event Type", "type": "Checkboxes", "value": ["Conference", "Meetup"] },
+        { "id": "qKr1", "name": "Email", "type": "EmailInput", "value": "careers@web3.berlin" },
+        {
+          "id": "kudt",
+          "name": "Logo",
+          "type": "FileUpload",
+          "value": [{ "url": "https://picsum.photos/seed/careers/200", "filename": "career-fair-logo.jpg" }]
+        },
+        { "id": "2HNZ", "name": "Organizer Name", "type": "ShortAnswer", "value": "Web3 Talent Network" },
+        { "id": "36q5", "name": "Event Start Date", "type": "DatePicker", "value": "2025-06-22" },
+        { "id": "jLDf", "name": "Number of Days", "type": "Slider", "value": 1 },
+        { "id": "tMZz", "name": "Day 1 - Start Time", "type": "TimePicker", "value": "10:00" },
+        { "id": "wbNC", "name": "Day 1 - End Time", "type": "TimePicker", "value": "18:00" },
+        { "id": "jmRB", "name": "Event Link/Website", "type": "URLInput", "value": "https://careers.web3.berlin" },
+        { "id": "naa9", "name": "Venue Name", "type": "ShortAnswer", "value": "Fabrik 23" },
+        { "id": "ry8w", "name": "Venue Address", "type": "ShortAnswer", "value": "Gerichtstraße 23, 13347 Berlin" },
+        { "id": "oPoS", "name": "Venue Link", "type": "URLInput", "value": "https://fabrik23.com" },
+        {
+          "id": "g5HN",
+          "name": "Link to Event Group Chat",
+          "type": "URLInput",
+          "value": "https://discord.gg/web3careers"
+        },
+        { "id": "cYGW", "name": "Event Group Chat Platform", "type": "Dropdown", "value": "Discord" }
+      ]
+    },
+    {
+      "submissionId": "clqnzm9hi0000356mpat3d6f19",
+      "submissionTime": "2025-02-01T17:15:00.000Z",
+      "lastUpdatedAt": "2025-02-01T17:15:00.000Z",
+      "questions": [
+        { "id": "uiNZ", "name": "Event Name", "type": "ShortAnswer", "value": "Blockchain Social Impact Summit" },
+        {
+          "id": "2ymU",
+          "name": "Event Description",
+          "type": "LongAnswer",
+          "value": "Exploring how blockchain technology can drive positive social change. Focus on sustainability, financial inclusion, and humanitarian applications."
+        },
+        { "id": "fckv", "name": "Event Type", "type": "Checkboxes", "value": ["Conference"] },
+        { "id": "qKr1", "name": "Email", "type": "EmailInput", "value": "impact@blockchain.berlin" },
+        {
+          "id": "kudt",
+          "name": "Logo",
+          "type": "FileUpload",
+          "value": [{ "url": "https://picsum.photos/seed/impact/200", "filename": "impact-summit-logo.jpg" }]
+        },
+        { "id": "2HNZ", "name": "Organizer Name", "type": "ShortAnswer", "value": "Blockchain for Good" },
+        { "id": "36q5", "name": "Event Start Date", "type": "DatePicker", "value": "2025-06-22" },
+        { "id": "jLDf", "name": "Number of Days", "type": "Slider", "value": 1 },
+        { "id": "tMZz", "name": "Day 1 - Start Time", "type": "TimePicker", "value": "09:00" },
+        { "id": "wbNC", "name": "Day 1 - End Time", "type": "TimePicker", "value": "17:00" },
+        { "id": "jmRB", "name": "Event Link/Website", "type": "URLInput", "value": "https://impact.blockchain.berlin" },
+        { "id": "naa9", "name": "Venue Name", "type": "ShortAnswer", "value": "Malzfabrik" },
+        { "id": "ry8w", "name": "Venue Address", "type": "ShortAnswer", "value": "Bessemerstraße 2-14, 12103 Berlin" },
+        { "id": "oPoS", "name": "Venue Link", "type": "URLInput", "value": "https://malzfabrik.de" },
+        {
+          "id": "g5HN",
+          "name": "Link to Event Group Chat",
+          "type": "URLInput",
+          "value": "https://discord.gg/blockchainimpact"
+        },
+        { "id": "cYGW", "name": "Event Group Chat Platform", "type": "Dropdown", "value": "Discord" }
+      ]
+    },
+    {
+      "submissionId": "clqnzm9hi0000356mpat3d6f20",
+      "submissionTime": "2025-02-01T17:30:00.000Z",
+      "lastUpdatedAt": "2025-02-01T17:30:00.000Z",
+      "questions": [
+        { "id": "uiNZ", "name": "Event Name", "type": "ShortAnswer", "value": "Blockchain Week Closing Party" },
+        {
+          "id": "2ymU",
+          "name": "Event Description",
+          "type": "LongAnswer",
+          "value": "Celebrate the end of Berlin Blockchain Week 2025! Join us for a night of networking, music, and celebration with the entire blockchain community."
+        },
+        { "id": "fckv", "name": "Event Type", "type": "Checkboxes", "value": ["Party"] },
+        { "id": "qKr1", "name": "Email", "type": "EmailInput", "value": "party@bbw.berlin" },
+        {
+          "id": "kudt",
+          "name": "Logo",
+          "type": "FileUpload",
+          "value": [{ "url": "https://picsum.photos/seed/closing/200", "filename": "closing-party-logo.jpg" }]
+        },
+        { "id": "2HNZ", "name": "Organizer Name", "type": "ShortAnswer", "value": "Berlin Blockchain Week" },
+        { "id": "36q5", "name": "Event Start Date", "type": "DatePicker", "value": "2025-06-22" },
+        { "id": "jLDf", "name": "Number of Days", "type": "Slider", "value": 1 },
+        { "id": "tMZz", "name": "Day 1 - Start Time", "type": "TimePicker", "value": "20:00" },
+        { "id": "wbNC", "name": "Day 1 - End Time", "type": "TimePicker", "value": "23:59" },
+        { "id": "jmRB", "name": "Event Link/Website", "type": "URLInput", "value": "https://bbw.berlin/closing-party" },
+        { "id": "naa9", "name": "Venue Name", "type": "ShortAnswer", "value": "Watergate" },
+        {
+          "id": "ry8w",
+          "name": "Venue Address",
+          "type": "ShortAnswer",
+          "value": "Falckensteinstraße 49, 10997 Berlin"
+        },
+        { "id": "oPoS", "name": "Venue Link", "type": "URLInput", "value": "https://water-gate.de" },
+        {
+          "id": "g5HN",
+          "name": "Link to Event Group Chat",
+          "type": "URLInput",
+          "value": "https://discord.gg/bbwclosing"
+        },
+        { "id": "cYGW", "name": "Event Group Chat Platform", "type": "Dropdown", "value": "Discord" }
+      ]
+    }
+  ],
+  "totalResponses": 20,
+  "pageCount": 1
+}

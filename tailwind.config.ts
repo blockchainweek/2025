@@ -6,6 +6,30 @@ export default {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  safelist: [
+    // Event type colors
+    "text-blue-400",
+    "text-purple-400",
+    "text-green-400",
+    "text-pink-400",
+    "text-yellow-400",
+    "text-orange-400",
+    "text-gray-400",
+    "bg-blue-500/10",
+    "bg-purple-500/10",
+    "bg-green-500/10",
+    "bg-pink-500/10",
+    "bg-yellow-500/10",
+    "bg-orange-500/10",
+    "bg-gray-500/10",
+    "border-blue-500/20",
+    "border-purple-500/20",
+    "border-green-500/20",
+    "border-pink-500/20",
+    "border-yellow-500/20",
+    "border-orange-500/20",
+    "border-gray-500/20",
+  ],
   theme: {
     extend: {
       colors: {
