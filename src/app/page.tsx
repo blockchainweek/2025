@@ -172,6 +172,38 @@ export default function Home() {
       </header>
 
       <main className="flex-1 flex flex-col items-center p-6 pb-20">
+        <div>
+          <div className="max-w-4xl mx-auto prose prose-invert text-sm text-left mb-4 flex flex-col gap-4">
+            <p className="text-gray-300">
+              Berlin Blockchain Week (short BBW) is a decentralized community-organized initiative born in 2018. There
+              is no single owner: It is an agnostic movement based on the premise that self-organization is the backbone
+              of our ecosystem.
+            </p>
+            <p className="text-gray-300">
+              Berlin Blockchain Week is committed to reduce the noise from the market and focus on education,
+              collaboration and knowledge exchange. For an event to be accepted on the BBW calendar, it must takes place
+              in Berlin (no online events!) during the BBW dates, and be related to blockchain or adjacent fields.
+            </p>
+            <p className="text-gray-300">
+              Our concept is simple: keep it educational, be as cost-friendly for the community as you can and focus on
+              creating a welcoming and inclusive environment, so interested parties at any knowledge level feel
+              comfortable to join.
+            </p>
+            <p className="text-gray-300">
+              The BBW efforts are currently loosely coordinated by the Department of Decentralization. This includes
+              hosting the BBW website and sharing relevant news about the week via the{" "}
+              <a
+                href="https://x.com/berblockweek"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary-500 hover:underline"
+              >
+                @berblockweek
+              </a>{" "}
+              Twitter account.
+            </p>
+          </div>
+        </div>
         <div className="w-full max-w-7xl">
           {isLoading ? (
             <div className="text-gray-400 my-12 text-xl text-center">{message}</div>

@@ -62,7 +62,7 @@ export default function EventsContainer({ events }: EventsContainerProps) {
       {/* Filter Bar */}
       <div className="flex flex-col items-center gap-4">
         <p className="text-gray-400 text-sm">Select event types below to filter</p>
-        <div className="flex flex-wrap justify-center gap-2 max-w-4xl">
+        <div className="flex flex-wrap justify-center gap-2">
           {EVENT_TYPES.map((type) => {
             const count = eventStats.byType[type];
             if (count === 0) return null; // Don't show types with no events
