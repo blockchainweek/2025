@@ -139,15 +139,6 @@ export default function Home() {
               Submit Event
             </a>
             <a
-              href="https://forms.fillout.com/t/6zcH1pfc4ius"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Submit your event"
-              className="px-2 py-2 bg-primary-500 rounded-lg text-white font-medium hover:opacity-90 transition-opacity flex md:hidden items-center gap-2 md:text-base text-sm"
-            >
-              <LuCalendarPlus className="w-5 h-5" />
-            </a>
-            <a
               href="https://github.com/blockchainweek/2025"
               target="_blank"
               rel="noopener noreferrer"
