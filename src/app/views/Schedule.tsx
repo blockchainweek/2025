@@ -148,7 +148,7 @@ const Schedule: FC<ScheduleProps> = ({ events }) => {
 
   // Find max column to calculate width
   const maxColumn = Math.max(...processedEvents.map((event) => event.column || 0));
-  const totalWidth = (maxColumn + 1) * (eventWidth + EVENT_GAP);
+  const totalWidth = (maxColumn + 2) * (eventWidth + EVENT_GAP);
 
   return (
     <>
@@ -164,7 +164,7 @@ const Schedule: FC<ScheduleProps> = ({ events }) => {
             <a
               key={dayIndex}
               href={`#date-${date.toISOString().split("T")[0]}`}
-              className="block text-white hover:text-red-500 text-base transition-all hover:font-medium px-3 py-2"
+              className="block text-white hover:text-red-500 text-base transition-all hover:font-medium px-3 md:pr-12 py-2"
             >
               <span className="flex flex-col items-center">
                 <span className="text-lg">{day}</span>
@@ -175,8 +175,8 @@ const Schedule: FC<ScheduleProps> = ({ events }) => {
         })}
       </div>
 
-      <div className="overflow-x-auto">
-        <div className="flex max-w-6xl" style={{ width: `${totalWidth + 25}px` }}>
+      <div className="overflow-x-auto mr-8">
+        <div className="flex max-w-6xl" style={{ width: `${totalWidth + 75}px` }}>
           {/* Date and time labels */}
           <div className="w-12 flex-shrink-0 bg-black h-full">
             {Array.from({ length: TOTAL_DAYS }).map((_, dayIndex) => {
@@ -247,7 +247,7 @@ const Schedule: FC<ScheduleProps> = ({ events }) => {
             </div>
 
             {/* Right Hour labels */}
-            <div className="absolute -right-12 top-0 bottom-0">
+            <div className="absolute -right-2 top-0 bottom-0">
               {Array.from({ length: TOTAL_DAYS }).map((_, dayIndex) =>
                 Array.from({ length: HOURS_PER_DAY }).map((_, hour) => {
                   const date = BerlinDate.from(START_DATE);
