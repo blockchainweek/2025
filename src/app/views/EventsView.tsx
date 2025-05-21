@@ -37,7 +37,7 @@ const EventsView: FC<EventsViewProps> = ({ events }) => {
 
         return (
           <div key={type} className="mb-12">
-            <h2 className="mb-2 sticky top-[4rem] z-10 py-2 bg-black/80 backdrop-blur-sm">
+            <h2 className="mb-2 sticky top-[4rem] z-10 py-2 bg-black/80 backdrop-blur-sm flex justify-center">
               <div
                 className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-lg font-medium ${getBadgeClasses(
                   type
