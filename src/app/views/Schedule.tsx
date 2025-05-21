@@ -152,13 +152,43 @@ const Schedule: FC<ScheduleProps> = ({ events }) => {
 
   return (
     <>
+      {/* Floating Navigation Menu */}
+      <div className="fixed right-0 top-1/2 -translate-y-1/2 bg-black/50 rounded-lg z-20 py-4 max-h-screen overflow-y-auto">
+        {Array.from({ length: TOTAL_DAYS }).map((_, dayIndex) => {
+          const date = BerlinDate.from(START_DATE);
+          date.setDate(date.getDate() + dayIndex);
+          const day = date.toLocaleDateString("en-US", { day: "numeric" });
+          const weekday = date.toLocaleDateString("en-US", { weekday: "short" });
+
+          return (
+            <a
+              key={dayIndex}
+              href={`#date-${date.toISOString().split("T")[0]}`}
+              className="block text-white hover:text-red-500 text-base transition-all hover:font-medium px-3 py-2"
+            >
+              <span className="flex flex-col items-center">
+                <span className="text-lg">{day}</span>
+                <span className="text-xs opacity-75">{weekday}</span>
+              </span>
+            </a>
+          );
+        })}
+      </div>
+
       <div className="overflow-x-auto">
         <div className="flex max-w-6xl" style={{ width: `${totalWidth + 25}px` }}>
           {/* Date and time labels */}
           <div className="w-12 flex-shrink-0 bg-black h-full">
             {Array.from({ length: TOTAL_DAYS }).map((_, dayIndex) => {
+              const date = BerlinDate.from(START_DATE);
+              date.setDate(date.getDate() + dayIndex);
               return (
-                <div key={dayIndex} style={{ height: `${CHUNKS_PER_DAY * CHUNK_HEIGHT}px` }} className="relative" />
+                <div
+                  key={dayIndex}
+                  id={`date-${date.toISOString().split("T")[0]}`}
+                  style={{ height: `${CHUNKS_PER_DAY * CHUNK_HEIGHT}px` }}
+                  className="relative scroll-mt-24"
+                />
               );
             })}
           </div>
