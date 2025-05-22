@@ -386,7 +386,7 @@ const Schedule: FC<ScheduleProps> = ({ events }) => {
                 startDate: selectedEvent.startDate.toISOString(),
                 endDate: selectedEvent.endDate.toISOString(),
                 startTime: selectedEvent.startTime,
-                endTime: selectedEvent.endTime,
+                endTime: selectedEvent.endTime === "23:59" ? "" : selectedEvent.endTime, // In the popup don't misleadingly show 23:59 as end time
                 currentDate: selectedEvent.currentDate,
               }}
               uncollapsible={true}

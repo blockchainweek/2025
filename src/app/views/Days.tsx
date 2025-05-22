@@ -24,7 +24,7 @@ const Days: FC<DaysProps> = ({ events }) => {
         dayIndex: index + 1,
         currentDate: currentDate.toISOString(),
         startTime: daySchedule?.startTime || "00:00",
-        endTime: daySchedule?.endTime || "23:59",
+        endTime: daySchedule?.endTime || "",
       };
     });
   });
