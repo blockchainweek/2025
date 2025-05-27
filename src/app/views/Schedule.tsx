@@ -49,15 +49,19 @@ const MINUTES_PER_DAY = HOURS_PER_DAY * 60;
 const CHUNKS_PER_DAY = MINUTES_PER_DAY / MINUTES_PER_CHUNK;
 const TOTAL_DAYS = Math.ceil((END_DATE.getTime() - START_DATE.getTime()) / (1000 * 60 * 60 * 24)) + 1;
 // const TIMELINE_HEIGHT = TOTAL_DAYS * CHUNKS_PER_DAY * CHUNK_HEIGHT;
-const EVENT_GAP = 8; // pixels between overlapping events
 
 const Schedule: FC<ScheduleProps> = ({ events }) => {
   const [eventWidth, setEventWidth] = useState(window.innerWidth < 640 ? 50 : 100);
   const [selectedEvent, setSelectedEvent] = useState<ProcessedEvent | null>(null);
+  const [eventGap, setEventGap] = useState(4);
 
   useEffect(() => {
+    setEventWidth(window.innerWidth < 640 ? 50 : 100);
+    setEventGap(window.innerWidth < 640 ? 4 : 8);
+
     const handleResize = () => {
       setEventWidth(window.innerWidth < 640 ? 50 : 100);
+      setEventGap(window.innerWidth < 640 ? 4 : 8);
     };
 
     window.addEventListener("resize", handleResize);
@@ -148,7 +152,7 @@ const Schedule: FC<ScheduleProps> = ({ events }) => {
 
   // Find max column to calculate width
   const maxColumn = Math.max(...processedEvents.map((event) => event.column || 0));
-  const totalWidth = (maxColumn + 2) * (eventWidth + EVENT_GAP);
+  const totalWidth = (maxColumn + 2) * (eventWidth + eventGap);
 
   return (
     <>
@@ -279,7 +283,7 @@ const Schedule: FC<ScheduleProps> = ({ events }) => {
                   onClick={() => setSelectedEvent(event)}
                   style={{
                     top: `${topPosition + chunkOffset + 1.5}px`,
-                    left: `${8 + (event.column || 0) * (eventWidth + EVENT_GAP)}px`,
+                    left: `${8 + (event.column || 0) * (eventWidth + eventGap)}px`,
                     width: `${eventWidth}px `,
                     height: `${eventHeight - 3}px`,
                   }}
