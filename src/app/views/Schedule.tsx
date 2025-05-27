@@ -164,10 +164,10 @@ const Schedule: FC<ScheduleProps> = ({ events }) => {
             <a
               key={dayIndex}
               href={`#date-${date.toISOString().split("T")[0]}`}
-              className="block text-white hover:text-red-500 text-base transition-all hover:font-medium px-3 md:pr-12 py-2"
+              className="block text-gray-300 hover:text-red-500 text-base transition-all hover:font-medium px-2 md:pr-4 py-[0.35rem]  bg-slate-800 bg-opacity-50"
             >
               <span className="flex flex-col items-center">
-                <span className="text-lg">{day}</span>
+                <span className="text-sm sm:text-lg">{day}</span>
                 <span className="text-xs opacity-75">{weekday}</span>
               </span>
             </a>
