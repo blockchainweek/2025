@@ -390,7 +390,7 @@ const Schedule: FC<ScheduleProps> = ({ events }) => {
                     )}
                     <span className="text-sm sm:text-base font-medium flex flex-row gap-1 items-center flex-wrap">
                       <span
-                        className={`text-[10px] sm:text-sm line-clamp-3 ${
+                        className={`text-[10px] sm:text-sm line-clamp-2 ${
                           event.eventName.length > 30 ? "text-[8px] sm:text-xs" : ""
                         }`}
                       >
