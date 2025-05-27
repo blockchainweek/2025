@@ -209,7 +209,7 @@ const Schedule: FC<ScheduleProps> = ({ events }) => {
             ))}
 
             {/* Left Hour labels */}
-            <div className="absolute -left-10 sm:-left-12 top-0 bottom-0">
+            <div className="left-0 top-0 bottom-0 sticky z-50 bg-black w-8 md:w-10 -ml-10 sm:-ml-12 h-full">
               {Array.from({ length: TOTAL_DAYS }).map((_, dayIndex) =>
                 Array.from({ length: HOURS_PER_DAY }).map((_, hour) => {
                   const date = BerlinDate.from(START_DATE);
@@ -222,93 +222,14 @@ const Schedule: FC<ScheduleProps> = ({ events }) => {
                   return (
                     <div
                       key={`${dayIndex}-${hour}`}
-                      className="absolute text-[9px] sm:text-xs text-gray-500"
+                      className="absolute text-[9px] sm:text-xs text-gray-500 bg-black"
                       style={{
                         top: `${(dayIndex * CHUNKS_PER_DAY + hour * 4) * CHUNK_HEIGHT}px`,
                         transform: "translateY(-50%)",
                       }}
                     >
                       {hour === 0 ? (
-                        <span className={`flex flex-col items-end text-right ${dayIndex === 0 ? "mt-16" : ""}`}>
-                          <span className="text-gray-400 text-[9px] sm:text-xs">
-                            {date.toLocaleDateString("en-US", { weekday: "short" })}
-                          </span>
-                          <span className="font-bold text-white text-sm sm:text-xl -mt-1">
-                            {date.toLocaleDateString("en-US", { month: "short", day: "numeric" })}
-                          </span>
-                        </span>
-                      ) : (
-                        `${displayHour.toString().padStart(2, "0")}:00`
-                      )}
-                    </div>
-                  );
-                })
-              )}
-            </div>
-
-            {/* Quarter, Half, and Three-Quarter Hour labels */}
-            {[0.25, 0.5, 0.75].map((position) => (
-              <div key={position} className="absolute top-0 bottom-0" style={{ left: `${position * 100}%` }}>
-                {Array.from({ length: TOTAL_DAYS }).map((_, dayIndex) =>
-                  Array.from({ length: HOURS_PER_DAY }).map((_, hour) => {
-                    const date = BerlinDate.from(START_DATE);
-                    date.setDate(date.getDate() + dayIndex);
-                    const displayHour = hour + DAY_START_HOUR;
-
-                    return (
-                      <div
-                        key={`${dayIndex}-${hour}`}
-                        className="absolute text-[9px] sm:text-xs text-gray-700 opacity-80"
-                        style={{
-                          top: `${(dayIndex * CHUNKS_PER_DAY + hour * 4) * CHUNK_HEIGHT}px`,
-                          transform: "translateY(-50%)",
-                        }}
-                      >
-                        {hour === 0 ? (
-                          <span
-                            className={`flex flex-col justify-center items-center text-center ${
-                              dayIndex === 0 ? "mt-16" : ""
-                            }`}
-                          >
-                            <span className="text-gray-700 text-[9px] sm:text-xs">
-                              {date.toLocaleDateString("en-US", { weekday: "short" })}
-                            </span>
-                            <span className=" text-gray-700 text-xs">
-                              {date.toLocaleDateString("en-US", { month: "short", day: "numeric" })}
-                            </span>
-                          </span>
-                        ) : (
-                          `${displayHour.toString().padStart(2, "0")}:00`
-                        )}
-                      </div>
-                    );
-                  })
-                )}
-              </div>
-            ))}
-
-            {/* Right Hour labels */}
-            <div className="absolute right-0 top-0 bottom-0">
-              {Array.from({ length: TOTAL_DAYS }).map((_, dayIndex) =>
-                Array.from({ length: HOURS_PER_DAY }).map((_, hour) => {
-                  const date = BerlinDate.from(START_DATE);
-                  date.setDate(date.getDate() + dayIndex);
-                  const displayHour = hour + DAY_START_HOUR;
-
-                  // Skip rendering some hours to avoid clutter
-                  if (displayHour === 23 || displayHour === DAY_START_HOUR + 1) return null;
-
-                  return (
-                    <div
-                      key={`${dayIndex}-${hour}`}
-                      className="absolute text-[9px] sm:text-xs text-gray-500"
-                      style={{
-                        top: `${(dayIndex * CHUNKS_PER_DAY + hour * 4) * CHUNK_HEIGHT}px`,
-                        transform: "translateY(-50%)",
-                      }}
-                    >
-                      {hour === 0 ? (
-                        <span className={`flex flex-col items-end text-right ${dayIndex === 0 ? "mt-16" : ""}`}>
+                        <span className={`flex flex-col ${dayIndex === 0 ? "mt-16" : ""}`}>
                           <span className="text-gray-400 text-[9px] sm:text-xs">
                             {date.toLocaleDateString("en-US", { weekday: "short" })}
                           </span>
