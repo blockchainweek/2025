@@ -176,7 +176,7 @@ const Schedule: FC<ScheduleProps> = ({ events }) => {
       </div>
 
       <div className="overflow-x-auto mr-8">
-        <div className="flex max-w-6xl" style={{ width: `${totalWidth + 75}px` }}>
+        <div className="flex" style={{ width: `${totalWidth}px` }}>
           {/* Date and time labels */}
           <div className="w-12 flex-shrink-0 bg-black h-full">
             {Array.from({ length: TOTAL_DAYS }).map((_, dayIndex) => {
