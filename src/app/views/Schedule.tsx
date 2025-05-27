@@ -357,10 +357,10 @@ const Schedule: FC<ScheduleProps> = ({ events }) => {
                   }`}
                   onClick={() => setSelectedEvent(event)}
                   style={{
-                    top: `${topPosition + chunkOffset}px`,
+                    top: `${topPosition + chunkOffset + 1.5}px`,
                     left: `${8 + (event.column || 0) * (eventWidth + EVENT_GAP)}px`,
-                    width: `${eventWidth}px`,
-                    height: `${eventHeight}px`,
+                    width: `${eventWidth}px `,
+                    height: `${eventHeight - 3}px`,
                   }}
                 >
                   {/* Flip event width and height here because we'll rotate the text */}
