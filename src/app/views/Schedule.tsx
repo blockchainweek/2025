@@ -175,7 +175,7 @@ const Schedule: FC<ScheduleProps> = ({ events }) => {
         })}
       </div>
 
-      <div className="-ml-2 overflow-x-auto mr-8 md:mr-24">
+      <div className="-ml-2 md:-ml-0 overflow-x-auto mr-8 md:mr-24">
         <div className="flex" style={{ width: `${totalWidth}px` }}>
           {/* Date and time labels */}
           <div className="w-12 flex-shrink-0 bg-black h-full">
