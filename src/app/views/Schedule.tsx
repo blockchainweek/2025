@@ -258,7 +258,7 @@ const Schedule: FC<ScheduleProps> = ({ events }) => {
                     return (
                       <div
                         key={`${dayIndex}-${hour}`}
-                        className="absolute text-[9px] sm:text-xs text-gray-500"
+                        className="absolute text-[9px] sm:text-xs text-gray-700"
                         style={{
                           top: `${(dayIndex * CHUNKS_PER_DAY + hour * 4) * CHUNK_HEIGHT}px`,
                           transform: "translateY(-50%)",
@@ -270,10 +270,10 @@ const Schedule: FC<ScheduleProps> = ({ events }) => {
                               dayIndex === 0 ? "mt-16" : ""
                             }`}
                           >
-                            <span className="text-gray-400 text-[9px] sm:text-xs">
+                            <span className="text-gray-700 text-[9px] sm:text-xs">
                               {date.toLocaleDateString("en-US", { weekday: "short" })}
                             </span>
-                            <span className=" text-gray-400 text-xs">
+                            <span className=" text-gray-700 text-xs">
                               {date.toLocaleDateString("en-US", { month: "short", day: "numeric" })}
                             </span>
                           </span>
@@ -394,10 +394,10 @@ const Schedule: FC<ScheduleProps> = ({ events }) => {
                           event.eventName.length > 30 ? "text-[8px] sm:text-xs" : ""
                         }`}
                       >
-                        {event.eventName}
-                      </span>
-                      <span className="text-[8px] sm:text-xs text-gray-400">
-                        {event.totalDays > 1 && ` - (Day ${event.dayIndex}/${event.totalDays})`}
+                        {event.eventName}{" "}
+                        <span className="text-[8px] sm:text-xs text-gray-400">
+                          {event.totalDays > 1 && ` - (Day ${event.dayIndex}/${event.totalDays})`}
+                        </span>
                       </span>
                     </span>
                   </div>
