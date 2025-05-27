@@ -258,7 +258,7 @@ const Schedule: FC<ScheduleProps> = ({ events }) => {
                     return (
                       <div
                         key={`${dayIndex}-${hour}`}
-                        className="absolute text-[9px] sm:text-xs text-gray-700"
+                        className="absolute text-[9px] sm:text-xs text-gray-700 opacity-80"
                         style={{
                           top: `${(dayIndex * CHUNKS_PER_DAY + hour * 4) * CHUNK_HEIGHT}px`,
                           transform: "translateY(-50%)",

@@ -171,7 +171,7 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="flex-1 flex flex-col items-center p-6 pb-20">
+      <main className="flex-1 flex flex-col items-center py-6 px-3 md:px-6 pb-20">
         <div>
           <div className="max-w-4xl mx-auto prose prose-invert text-sm text-left mb-4 flex flex-col gap-4">
             <p className="text-gray-300">
