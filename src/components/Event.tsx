@@ -22,6 +22,7 @@ interface EventProps {
   uncollapsible?: boolean;
   listView?: boolean;
   hideCalendar?: boolean;
+  className?: string;
 }
 
 const generateGoogleCalendarLink = (event: EventProps["event"]) => {
@@ -54,7 +55,13 @@ const generateGoogleCalendarLink = (event: EventProps["event"]) => {
   return `https://calendar.google.com/calendar/render?${params.toString()}`;
 };
 
-const Event: FC<EventProps> = ({ event, uncollapsible = false, listView = false, hideCalendar = false }) => {
+const Event: FC<EventProps> = ({
+  event,
+  uncollapsible = false,
+  listView = false,
+  hideCalendar = false,
+  className = "",
+}) => {
   const [isExpanded, setIsExpanded] = useState(uncollapsible);
 
   const getChatIcon = () => {
@@ -76,7 +83,7 @@ const Event: FC<EventProps> = ({ event, uncollapsible = false, listView = false,
     <div
       className={`bg-gray-900 rounded-lg p-4 sm:p-6 border border-gray-800 hover:border-gray-700 transition-colors ${
         uncollapsible ? "" : "cursor-pointer"
-      }`}
+      } ${className}`}
       onClick={() => !uncollapsible && setIsExpanded(!isExpanded)}
     >
       <div>

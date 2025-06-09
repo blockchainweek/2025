@@ -54,11 +54,26 @@ const Days: FC<DaysProps> = ({ events }) => {
           const displayDate = new BerlinDate(date);
           const day = displayDate.toLocaleDateString("en-US", { day: "numeric" });
           const weekday = displayDate.toLocaleDateString("en-US", { weekday: "short" });
+
+          // Check if this day is in the past
+          const now = new BerlinDate(Date.now());
+          const endOfDay = new BerlinDate(
+            displayDate.getFullYear(),
+            displayDate.getMonth(),
+            displayDate.getDate(),
+            23,
+            59,
+            59
+          );
+          const isPastDay = now > endOfDay;
+
           return (
             <a
               key={date}
               href={`#date-${date}`}
-              className="block text-gray-300 hover:text-red-500 text-base transition-all hover:font-medium px-2 md:pr-4 py-[0.35rem]  bg-black bg-opacity-50"
+              className={`block text-gray-300 hover:text-red-500 text-base transition-all hover:font-medium px-2 md:pr-4 py-[0.35rem] bg-black bg-opacity-50 ${
+                isPastDay ? "opacity-30" : ""
+              }`}
             >
               <span className="flex flex-col items-center">
                 <span className="text-sm sm:text-lg">{day}</span>
@@ -71,10 +86,23 @@ const Days: FC<DaysProps> = ({ events }) => {
 
       {Object.entries(eventsByDate).map(([date, dateEvents]) => {
         const displayDate = new BerlinDate(date);
+
+        // Check if this day is in the past
+        const now = new BerlinDate(Date.now());
+        const endOfDay = new BerlinDate(
+          displayDate.getFullYear(),
+          displayDate.getMonth(),
+          displayDate.getDate(),
+          23,
+          59,
+          59
+        );
+        const isPastDay = now > endOfDay;
+
         return (
           <div key={date} id={`date-${date}`} className="space-y-6 scroll-mt-24">
             <div className="sticky top-16 z-10 -mx-4 px-4 py-2 bg-black/80 backdrop-blur-sm">
-              <h2 className="text-2xl font-bold text-white">
+              <h2 className={`text-2xl font-bold text-white ${isPastDay ? "opacity-30" : ""}`}>
                 {displayDate.toLocaleDateString("en-US", {
                   weekday: "long",
                   month: "long",
@@ -83,9 +111,29 @@ const Days: FC<DaysProps> = ({ events }) => {
               </h2>
             </div>
 
-            {dateEvents.map((event, index) => (
-              <Event key={`${event.eventName}-${index}`} event={event} />
-            ))}
+            {dateEvents.map((event, index) => {
+              // Check if event is past (using Berlin time)
+              const now = new BerlinDate(Date.now());
+
+              // Handle events that end before 6am (next day events)
+              const endTime = event.endTime || "23:59";
+              const [endHour] = endTime.split(":").map(Number);
+              const eventDate = new BerlinDate(event.currentDate.split("T")[0]);
+
+              if (endHour < 6) {
+                // Add one day if end time is before 6am
+                eventDate.setDate(eventDate.getDate() + 1);
+              }
+
+              const eventEndTime = new BerlinDate(`${eventDate.toISOString().split("T")[0]}T${endTime}:00`);
+              const isPastEvent = now > eventEndTime;
+
+              return (
+                <div key={`${event.eventName}-${index}`} className={isPastEvent ? "opacity-30" : ""}>
+                  <Event event={event} />
+                </div>
+              );
+            })}
           </div>
         );
       })}
