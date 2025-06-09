@@ -164,11 +164,18 @@ const Schedule: FC<ScheduleProps> = ({ events }) => {
           const day = date.toLocaleDateString("en-US", { day: "numeric" });
           const weekday = date.toLocaleDateString("en-US", { weekday: "short" });
 
+          // Check if this day is in the past
+          const now = new BerlinDate(Date.now());
+          const endOfDay = new BerlinDate(date.getFullYear(), date.getMonth(), date.getDate(), 23, 59, 59);
+          const isPastDay = now > endOfDay;
+
           return (
             <a
               key={dayIndex}
               href={`#date-${date.toISOString().split("T")[0]}`}
-              className="block text-gray-300 hover:text-red-500 text-base transition-all hover:font-medium px-2 md:pr-4 py-[0.35rem]  bg-slate-800 bg-opacity-50"
+              className={`block text-gray-300 hover:text-red-500 text-base transition-all hover:font-medium px-2 md:pr-4 py-[0.35rem] bg-slate-800 bg-opacity-50 ${
+                isPastDay ? "opacity-30" : ""
+              }`}
             >
               <span className="flex flex-col items-center">
                 <span className="text-sm sm:text-lg">{day}</span>
@@ -212,6 +219,45 @@ const Schedule: FC<ScheduleProps> = ({ events }) => {
               />
             ))}
 
+            {/* Current time indicator */}
+            {(() => {
+              const now = new BerlinDate(Date.now());
+              const daysSinceStart = Math.floor((now.getTime() - START_DATE.getTime()) / (1000 * 60 * 60 * 24));
+
+              // Only show if current date is within the schedule range
+              if (daysSinceStart < 0 || daysSinceStart >= TOTAL_DAYS) return null;
+
+              const currentHour = now.getHours();
+              const currentMinute = now.getMinutes();
+
+              // Only show if within display hours (6am to midnight)
+              if (currentHour < DAY_START_HOUR) return null;
+
+              // Round to nearest 15-minute chunk
+              const roundedMinute = Math.round(currentMinute / MINUTES_PER_CHUNK) * MINUTES_PER_CHUNK;
+              const adjustedHour = currentHour + Math.floor(roundedMinute / 60);
+              const finalMinute = roundedMinute % 60;
+
+              // Calculate position
+              const minutesSinceDayStart = (adjustedHour - DAY_START_HOUR) * 60 + finalMinute;
+              const chunkIndex = Math.floor(minutesSinceDayStart / MINUTES_PER_CHUNK);
+              const topPosition = (daysSinceStart * CHUNKS_PER_DAY + chunkIndex) * CHUNK_HEIGHT;
+
+              return (
+                <div
+                  className="absolute w-full border-t-2 border-red-500 z-30 animate-pulse"
+                  style={{
+                    top: `${topPosition}px`,
+                    boxShadow: "0 0 8px rgba(239, 68, 68, 0.6)",
+                  }}
+                >
+                  <div className="absolute left-2 -top-6 bg-red-500 text-white text-xs px-2 py-1 rounded font-medium">
+                    Now
+                  </div>
+                </div>
+              );
+            })()}
+
             {/* Left Hour labels */}
             <div className="left-0 top-0 bottom-0 sticky z-50 bg-black w-8 md:w-10 -ml-10 sm:-ml-12 h-full">
               {Array.from({ length: TOTAL_DAYS }).map((_, dayIndex) =>
@@ -223,10 +269,17 @@ const Schedule: FC<ScheduleProps> = ({ events }) => {
                   // Skip rendering some hours to avoid clutter
                   if (displayHour === 23 || displayHour === DAY_START_HOUR + 1) return null;
 
+                  // Check if this hour is in the past
+                  const now = new BerlinDate(Date.now());
+                  const hourTime = new BerlinDate(date.getFullYear(), date.getMonth(), date.getDate(), displayHour, 0);
+                  const isPastHour = now > hourTime;
+
                   return (
                     <div
                       key={`${dayIndex}-${hour}`}
-                      className="absolute text-[9px] sm:text-xs text-gray-500 bg-black"
+                      className={`absolute text-[9px] sm:text-xs text-gray-500 bg-black ${
+                        isPastHour ? "opacity-30" : ""
+                      }`}
                       style={{
                         top: `${(dayIndex * CHUNKS_PER_DAY + hour * 4) * CHUNK_HEIGHT}px`,
                         transform: "translateY(-50%)",
@@ -274,12 +327,17 @@ const Schedule: FC<ScheduleProps> = ({ events }) => {
               // Skip events that end before 6am
               if (hours < DAY_START_HOUR && !event.isNextDayEvent) return null;
 
+              // Check if event is past (using Berlin time)
+              const now = new BerlinDate(Date.now());
+              const eventEndTime = new BerlinDate(`${event.currentDate.split("T")[0]}T${event.endTime}:00`);
+              const isPastEvent = now > eventEndTime;
+
               return (
                 <div
                   key={`${event.eventName}-${index}`}
                   className={`absolute p-2 rounded bg-gray-900 border border-gray-700 items-center justify-center cursor-pointer hover:border-primary-500 transition-colors ${
                     event.isNextDayEvent ? "border-primary-500" : ""
-                  }`}
+                  } ${isPastEvent ? "opacity-30" : ""}`}
                   onClick={() => setSelectedEvent(event)}
                   style={{
                     top: `${topPosition + chunkOffset + 1.5}px`,
