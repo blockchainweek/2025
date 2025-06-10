@@ -54,6 +54,7 @@ const Schedule: FC<ScheduleProps> = ({ events }) => {
   const [eventWidth, setEventWidth] = useState(window.innerWidth < 640 ? 50 : 100);
   const [selectedEvent, setSelectedEvent] = useState<ProcessedEvent | null>(null);
   const [eventGap, setEventGap] = useState(4);
+  const [currentTime, setCurrentTime] = useState(() => new BerlinDate(Date.now()));
 
   useEffect(() => {
     setEventWidth(window.innerWidth < 640 ? 50 : 100);
@@ -66,6 +67,15 @@ const Schedule: FC<ScheduleProps> = ({ events }) => {
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    // Update current time every minute
+    const interval = setInterval(() => {
+      setCurrentTime(new BerlinDate(Date.now()));
+    }, 60000); // 60000ms = 1 minute
+
+    return () => clearInterval(interval);
   }, []);
 
   // Helper function to check if end time is on the next day
@@ -165,9 +175,8 @@ const Schedule: FC<ScheduleProps> = ({ events }) => {
           const weekday = date.toLocaleDateString("en-US", { weekday: "short" });
 
           // Check if this day is in the past
-          const now = new BerlinDate(Date.now());
           const endOfDay = new BerlinDate(date.getFullYear(), date.getMonth(), date.getDate(), 23, 59, 59);
-          const isPastDay = now > endOfDay;
+          const isPastDay = currentTime > endOfDay;
 
           return (
             <a
@@ -221,14 +230,13 @@ const Schedule: FC<ScheduleProps> = ({ events }) => {
 
             {/* Current time indicator */}
             {(() => {
-              const now = new BerlinDate(Date.now());
-              const daysSinceStart = Math.floor((now.getTime() - START_DATE.getTime()) / (1000 * 60 * 60 * 24));
+              const daysSinceStart = Math.floor((currentTime.getTime() - START_DATE.getTime()) / (1000 * 60 * 60 * 24));
 
               // Only show if current date is within the schedule range
               if (daysSinceStart < 0 || daysSinceStart >= TOTAL_DAYS) return null;
 
-              const currentHour = now.getHours();
-              const currentMinute = now.getMinutes();
+              const currentHour = currentTime.getHours();
+              const currentMinute = currentTime.getMinutes();
 
               // Only show if within display hours (6am to midnight)
               if (currentHour < DAY_START_HOUR) return null;
@@ -270,9 +278,8 @@ const Schedule: FC<ScheduleProps> = ({ events }) => {
                   if (displayHour === 23 || displayHour === DAY_START_HOUR + 1) return null;
 
                   // Check if this hour is in the past
-                  const now = new BerlinDate(Date.now());
                   const hourTime = new BerlinDate(date.getFullYear(), date.getMonth(), date.getDate(), displayHour, 0);
-                  const isPastHour = now > hourTime;
+                  const isPastHour = currentTime > hourTime;
 
                   return (
                     <div
@@ -328,9 +335,8 @@ const Schedule: FC<ScheduleProps> = ({ events }) => {
               if (hours < DAY_START_HOUR && !event.isNextDayEvent) return null;
 
               // Check if event is past (using Berlin time)
-              const now = new BerlinDate(Date.now());
               const eventEndTime = new BerlinDate(`${event.currentDate.split("T")[0]}T${event.endTime}:00`);
-              const isPastEvent = now > eventEndTime;
+              const isPastEvent = currentTime > eventEndTime;
 
               return (
                 <div
