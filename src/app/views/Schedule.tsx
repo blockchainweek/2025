@@ -324,7 +324,7 @@ const Schedule: FC<ScheduleProps> = ({ events }) => {
               const chunkOffset = Math.floor(minutesSinceDayStart / MINUTES_PER_CHUNK) * CHUNK_HEIGHT;
               const eventHeight = Math.floor(durationInMinutes / MINUTES_PER_CHUNK) * CHUNK_HEIGHT;
 
-              // Skip events that end before 6am
+              // Skip events that end before 6am.
               if (hours < DAY_START_HOUR && !event.isNextDayEvent) return null;
 
               // Check if event is past (using Berlin time)
