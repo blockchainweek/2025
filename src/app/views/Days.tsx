@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useState, useEffect } from "react";
 import { EventType } from "./Schedule";
 import Event from "../../components/Event";
 import { BerlinDate } from "@/utils/BerlinDate";
@@ -8,6 +8,16 @@ interface DaysProps {
 }
 
 const Days: FC<DaysProps> = ({ events }) => {
+  const [currentTime, setCurrentTime] = useState(() => new BerlinDate(Date.now()));
+
+  useEffect(() => {
+    // Update current time every minute
+    const interval = setInterval(() => {
+      setCurrentTime(new BerlinDate(Date.now()));
+    }, 60000); // 60000ms = 1 minute
+
+    return () => clearInterval(interval);
+  }, []);
   // Split multi-day events into separate day events
   const splitEvents = events.flatMap((event) => {
     const startDate = new BerlinDate(event.startDate);
@@ -56,7 +66,6 @@ const Days: FC<DaysProps> = ({ events }) => {
           const weekday = displayDate.toLocaleDateString("en-US", { weekday: "short" });
 
           // Check if this day is in the past
-          const now = new BerlinDate(Date.now());
           const endOfDay = new BerlinDate(
             displayDate.getFullYear(),
             displayDate.getMonth(),
@@ -65,13 +74,21 @@ const Days: FC<DaysProps> = ({ events }) => {
             59,
             59
           );
-          const isPastDay = now > endOfDay;
+          const isPastDay = currentTime > endOfDay;
+
+          // Check if this is today
+          const isToday =
+            displayDate.getFullYear() === currentTime.getFullYear() &&
+            displayDate.getMonth() === currentTime.getMonth() &&
+            displayDate.getDate() === currentTime.getDate();
 
           return (
             <a
               key={date}
               href={`#date-${date}`}
-              className={`block text-gray-300 hover:text-red-500 text-base transition-all hover:font-medium px-2 md:pr-4 py-[0.35rem] bg-black bg-opacity-50 ${
+              className={`block ${
+                isToday ? "text-red-500" : "text-gray-300"
+              } hover:text-red-500 text-base transition-all hover:font-medium px-2 md:pr-4 py-[0.35rem] bg-black bg-opacity-50 ${
                 isPastDay ? "opacity-30" : ""
               }`}
             >
@@ -88,7 +105,6 @@ const Days: FC<DaysProps> = ({ events }) => {
         const displayDate = new BerlinDate(date);
 
         // Check if this day is in the past
-        const now = new BerlinDate(Date.now());
         const endOfDay = new BerlinDate(
           displayDate.getFullYear(),
           displayDate.getMonth(),
@@ -97,7 +113,7 @@ const Days: FC<DaysProps> = ({ events }) => {
           59,
           59
         );
-        const isPastDay = now > endOfDay;
+        const isPastDay = currentTime > endOfDay;
 
         return (
           <div key={date} id={`date-${date}`} className="space-y-6 scroll-mt-24">

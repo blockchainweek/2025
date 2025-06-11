@@ -196,15 +196,23 @@ const Schedule: FC<ScheduleProps> = ({ events }) => {
           const endOfDay = new BerlinDate(date.getFullYear(), date.getMonth(), date.getDate(), 23, 59, 59);
           const isPastDay = currentTime > endOfDay;
 
+          // Check if this is today
+          const isToday =
+            date.getFullYear() === currentTime.getFullYear() &&
+            date.getMonth() === currentTime.getMonth() &&
+            date.getDate() === currentTime.getDate();
+
           return (
             <a
               key={dayIndex}
               href={`#date-${date.toISOString().split("T")[0]}`}
-              className={`block text-gray-300 hover:text-red-500 text-base transition-all hover:font-medium px-2 md:pr-4 py-[0.35rem] bg-slate-800 bg-opacity-50 ${
+              className={`block ${
+                isToday ? "text-red-500" : "text-gray-300"
+              } hover:text-red-500 text-base transition-all hover:font-medium px-2 md:pr-4 py-[0.35rem] bg-slate-800 bg-opacity-50 ${
                 isPastDay ? "opacity-30" : ""
-              }`}
+              } `}
             >
-              <span className="flex flex-col items-center">
+              <span className={`flex flex-col items-center `}>
                 <span className="text-sm sm:text-lg">{day}</span>
                 <span className="text-xs opacity-75">{weekday}</span>
               </span>
