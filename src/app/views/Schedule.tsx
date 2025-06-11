@@ -78,6 +78,24 @@ const Schedule: FC<ScheduleProps> = ({ events }) => {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    // Scroll to "Now" indicator when component loads
+    const scrollToNow = () => {
+      const nowIndicator = document.getElementById("now-indicator");
+      if (nowIndicator) {
+        nowIndicator.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        });
+      }
+    };
+
+    // Delay scroll to ensure the component is fully rendered
+    const timeoutId = setTimeout(scrollToNow, 100);
+
+    return () => clearTimeout(timeoutId);
+  }, []);
+
   // Helper function to check if end time is on the next day
   const isNextDayEvent = (startTime: string, endTime: string) => {
     const [startHour] = startTime.split(":").map(Number);
@@ -253,6 +271,7 @@ const Schedule: FC<ScheduleProps> = ({ events }) => {
 
               return (
                 <div
+                  id="now-indicator"
                   className="absolute w-full border-t-2 border-red-500 z-30 animate-pulse"
                   style={{
                     top: `${topPosition}px`,
