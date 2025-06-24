@@ -192,9 +192,10 @@ const Schedule: FC<ScheduleProps> = ({ events }) => {
           const day = date.toLocaleDateString("en-US", { day: "numeric" });
           const weekday = date.toLocaleDateString("en-US", { weekday: "short" });
 
+          // Was used to mark past days
           // Check if this day is in the past
-          const endOfDay = new BerlinDate(date.getFullYear(), date.getMonth(), date.getDate(), 23, 59, 59);
-          const isPastDay = currentTime > endOfDay;
+          // const endOfDay = new BerlinDate(date.getFullYear(), date.getMonth(), date.getDate(), 23, 59, 59);
+          // const isPastDay = currentTime > endOfDay;
 
           // Check if this is today
           const isToday =
@@ -208,9 +209,7 @@ const Schedule: FC<ScheduleProps> = ({ events }) => {
               href={`#date-${date.toISOString().split("T")[0]}`}
               className={`block ${
                 isToday ? "text-red-500" : "text-gray-300"
-              } hover:text-red-500 text-base transition-all hover:font-medium px-2 md:pr-4 py-[0.35rem] bg-slate-800 bg-opacity-50 ${
-                isPastDay ? "opacity-30" : ""
-              } `}
+              } hover:text-red-500 text-base transition-all hover:font-medium px-2 md:pr-4 py-[0.35rem] bg-slate-800 bg-opacity-50`}
             >
               <span className={`flex flex-col items-center `}>
                 <span className="text-sm sm:text-lg">{day}</span>
@@ -304,16 +303,15 @@ const Schedule: FC<ScheduleProps> = ({ events }) => {
                   // Skip rendering some hours to avoid clutter
                   if (displayHour === 23 || displayHour === DAY_START_HOUR + 1) return null;
 
+                  // Was used to mark past hours
                   // Check if this hour is in the past
-                  const hourTime = new BerlinDate(date.getFullYear(), date.getMonth(), date.getDate(), displayHour, 0);
-                  const isPastHour = currentTime > hourTime;
+                  // const hourTime = new BerlinDate(date.getFullYear(), date.getMonth(), date.getDate(), displayHour, 0);
+                  // const isPastHour = currentTime > hourTime;
 
                   return (
                     <div
                       key={`${dayIndex}-${hour}`}
-                      className={`absolute text-[9px] sm:text-xs text-gray-500 bg-black ${
-                        isPastHour ? "opacity-30" : ""
-                      }`}
+                      className={`absolute text-[9px] sm:text-xs text-gray-500 bg-black`}
                       style={{
                         top: `${(dayIndex * CHUNKS_PER_DAY + hour * 4) * CHUNK_HEIGHT}px`,
                         transform: "translateY(-50%)",
@@ -361,16 +359,17 @@ const Schedule: FC<ScheduleProps> = ({ events }) => {
               // Skip events that end before 6am.
               if (hours < DAY_START_HOUR && !event.isNextDayEvent) return null;
 
+              // Was used to mark past events
               // Check if event is past (using Berlin time)
-              const eventEndTime = new BerlinDate(`${event.currentDate.split("T")[0]}T${event.endTime}:00`);
-              const isPastEvent = currentTime > eventEndTime;
+              // const eventEndTime = new BerlinDate(`${event.currentDate.split("T")[0]}T${event.endTime}:00`);
+              // const isPastEvent = currentTime > eventEndTime;
 
               return (
                 <div
                   key={`${event.eventName}-${index}`}
                   className={`absolute p-2 rounded bg-gray-900 border border-gray-700 items-center justify-center cursor-pointer hover:border-primary-500 transition-colors ${
                     event.isNextDayEvent ? "border-primary-500" : ""
-                  } ${isPastEvent ? "opacity-30" : ""}`}
+                  }`}
                   onClick={() => setSelectedEvent(event)}
                   style={{
                     top: `${topPosition + chunkOffset + 1.5}px`,

@@ -190,11 +190,11 @@ export default function Home() {
               comfortable to join.
             </p>
             <p className="text-gray-300">
-              The BBW efforts are currently loosely coordinated by the{" "}
+              The BBW 2025 efforts was loosely coordinated by the{" "}
               <a href="https://dod.ngo/" target="_blank" rel="noopener" className="text-primary-500 hover:underline">
                 Department of Decentralization
               </a>
-              . This includes hosting the BBW website and sharing relevant news about the week via the{" "}
+              . This included hosting the BBW 2025 website and sharing relevant news about the week via the{" "}
               <a
                 href="https://x.com/berblockweek"
                 target="_blank"

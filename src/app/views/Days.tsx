@@ -65,16 +65,17 @@ const Days: FC<DaysProps> = ({ events }) => {
           const day = displayDate.toLocaleDateString("en-US", { day: "numeric" });
           const weekday = displayDate.toLocaleDateString("en-US", { weekday: "short" });
 
+          // Was used to mark past days
           // Check if this day is in the past
-          const endOfDay = new BerlinDate(
-            displayDate.getFullYear(),
-            displayDate.getMonth(),
-            displayDate.getDate(),
-            23,
-            59,
-            59
-          );
-          const isPastDay = currentTime > endOfDay;
+          // const endOfDay = new BerlinDate(
+          //   displayDate.getFullYear(),
+          //   displayDate.getMonth(),
+          //   displayDate.getDate(),
+          //   23,
+          //   59,
+          //   59
+          // );
+          // const isPastDay = currentTime > endOfDay;
 
           // Check if this is today
           const isToday =
@@ -88,9 +89,7 @@ const Days: FC<DaysProps> = ({ events }) => {
               href={`#date-${date}`}
               className={`block ${
                 isToday ? "text-red-500" : "text-gray-300"
-              } hover:text-red-500 text-base transition-all hover:font-medium px-2 md:pr-4 py-[0.35rem] bg-black bg-opacity-50 ${
-                isPastDay ? "opacity-30" : ""
-              }`}
+              } hover:text-red-500 text-base transition-all hover:font-medium px-2 md:pr-4 py-[0.35rem] bg-black bg-opacity-50`}
             >
               <span className="flex flex-col items-center">
                 <span className="text-sm sm:text-lg">{day}</span>
@@ -104,21 +103,22 @@ const Days: FC<DaysProps> = ({ events }) => {
       {Object.entries(eventsByDate).map(([date, dateEvents]) => {
         const displayDate = new BerlinDate(date);
 
-        // Check if this day is in the past
-        const endOfDay = new BerlinDate(
-          displayDate.getFullYear(),
-          displayDate.getMonth(),
-          displayDate.getDate(),
-          23,
-          59,
-          59
-        );
-        const isPastDay = currentTime > endOfDay;
+        // Was used to mark past days
+        // // Check if this day is in the past
+        // const endOfDay = new BerlinDate(
+        //   displayDate.getFullYear(),
+        //   displayDate.getMonth(),
+        //   displayDate.getDate(),
+        //   23,
+        //   59,
+        //   59
+        // );
+        // const isPastDay = currentTime > endOfDay;
 
         return (
           <div key={date} id={`date-${date}`} className="space-y-6 scroll-mt-24">
             <div className="sticky top-16 z-10 -mx-4 px-4 py-2 bg-black/80 backdrop-blur-sm">
-              <h2 className={`text-2xl font-bold text-white ${isPastDay ? "opacity-30" : ""}`}>
+              <h2 className={`text-2xl font-bold text-white`}>
                 {displayDate.toLocaleDateString("en-US", {
                   weekday: "long",
                   month: "long",
@@ -129,7 +129,7 @@ const Days: FC<DaysProps> = ({ events }) => {
 
             {dateEvents.map((event, index) => {
               // Check if event is past (using Berlin time)
-              const now = new BerlinDate(Date.now());
+              // const now = new BerlinDate(Date.now());
 
               // Handle events that end before 6am (next day events)
               const endTime = event.endTime || "23:59";
@@ -141,11 +141,12 @@ const Days: FC<DaysProps> = ({ events }) => {
                 eventDate.setDate(eventDate.getDate() + 1);
               }
 
-              const eventEndTime = new BerlinDate(`${eventDate.toISOString().split("T")[0]}T${endTime}:00`);
-              const isPastEvent = now > eventEndTime;
+              // Was used to mark past events
+              // const eventEndTime = new BerlinDate(`${eventDate.toISOString().split("T")[0]}T${endTime}:00`);
+              // const isPastEvent = now > eventEndTime;
 
               return (
-                <div key={`${event.eventName}-${index}`} className={isPastEvent ? "opacity-30" : ""}>
+                <div key={`${event.eventName}-${index}`}>
                   <Event event={event} />
                 </div>
               );
