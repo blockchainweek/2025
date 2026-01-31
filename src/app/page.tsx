@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { LuCalendarPlus } from "react-icons/lu";
 import { SiMatrix } from "react-icons/si";
 import { BerlinDate } from "@/utils/BerlinDate";
+import eventsData from "../../public/events-2025.json";
 
 interface Question {
   id: string;
@@ -87,30 +88,31 @@ function transformEvents(data: ResponseData): EventType[] {
   return transformedEvents as EventType[];
 }
 
-const EVENTS_FETCH_URL = "https://europe-west1-ethberlin-dystopian-faces.cloudfunctions.net/bbw2025-get-fillout-events";
-
 export default function Home() {
   const [events, setEvents] = useState<EventType[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [message, setMessage] = useState<string | null>("Loading events...");
 
   useEffect(() => {
-    fetch(EVENTS_FETCH_URL)
-      .then((response) => response.json())
-      .then((data: ResponseData) => {
-        const transformedEvents = transformEvents(data);
-        setEvents(transformedEvents);
-        setIsLoading(false);
-      })
-      .catch((error) => {
-        console.error("Error fetching events:", error);
-        setIsLoading(false);
-        setMessage("Error fetching events :(");
-      });
+    // Use static JSON data (archived from 2025 API)
+    const transformedEvents = transformEvents(eventsData as unknown as ResponseData);
+    setEvents(transformedEvents);
+    setIsLoading(false);
   }, []);
 
   return (
     <div className="flex flex-col min-h-screen max-w-screen bg-black text-white">
+      {/* Archive Banner */}
+      <div className="w-full bg-primary-500 py-3 px-6 text-center">
+        <p className="text-white text-lg md:text-xl font-semibold">
+          This is the archived website for the 2025 edition.{" "}
+          <a
+            href="https://blockchainweek.berlin"
+            className="underline hover:opacity-80"
+          >
+            Visit the current edition
+          </a>
+        </p>
+      </div>
       {/* Header */}
       <header className="w-full border-b border-gray-800 py-4 px-6">
         <div className="max-w-7xl mx-auto flex justify-between md:items-center">
@@ -209,7 +211,7 @@ export default function Home() {
         </div>
         <div className="w-full max-w-7xl">
           {isLoading ? (
-            <div className="text-gray-400 my-12 text-xl text-center">{message}</div>
+            <div className="text-gray-400 my-12 text-xl text-center">Loading events...</div>
           ) : (
             <EventsContainer events={events} />
           )}
